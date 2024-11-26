@@ -19,6 +19,11 @@ footer {
     display:none !important;
 }
 
+/* Links */
 a {
     color:#6f5add !important;
+}
+a.drac-box
+{
+    color: #fff !important;
 }
