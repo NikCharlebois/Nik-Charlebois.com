@@ -49,8 +49,8 @@ extra:
   generator: false
   analytics:
     provider: google
-    property: UA-246073771-1
+    property: G-G3L4JDZK7N
 extra_css:
   - stylesheets/extra.css
 edit_uri: tree/Dev/docs/docs
-copyright: Microsoft365DSC
+copyright: Nik Charlebois
