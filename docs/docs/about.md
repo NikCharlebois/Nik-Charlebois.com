@@ -1,18 +1,3 @@
-# Community Resources
+# About Me
 
-This section contains various resources produced by both Microsoft and members of the Microsoft365DSC Community.
-
-## Blog Articles
-
-- [Using Microsoft365DSC in an Azure Automation Runbook Web page icon](https://o365eh.com/2020/10/27/episode-74-using-microsoft-dsc-as-a-runbook-in-azure-automation/)
-
-## Podcasts/Webcasts
-
-- Microsoft 365 Developer Podcast: [Microsoft365DSC News with Nik Charlebois](https://www.m365devpodcast.com/e/microsoft-365-dsc-with-nik-charlebois/)
-- Microsoft 365 Developer Podcast: [Configuration as Code and DevOPS for Office 365 with Nik Charlebois](https://www.m365devpodcast.com/e/configuration-as-code-and-devops-for-office-365/)
-- O365EH!: [Discussions on Microsoft 365 Desired State Configuration with Nik Charlebois](https://o365eh.com/2020/09/15/episode-71-microsoft-365-desired-state-configuration-dsc/)
-- RunAsRadio: [Microsoft 365 Desired State Configuration with Nik Charlebois](http://www.runasradio.com/default.aspx?ShowNum=689)
-
-## Whitepapers
-
-- [Managing Microsoft 365 with Microsoft365DSC and Azure DevOps](https://aka.ms/m365dscwhitepaper)
+<p>My name is Nik Charlebois and I am a Principal Program Manager at Microsoft, driving our configuration-as-code efforts for Microsoft 365. I am an ex Microsoft MVP, a frequent conference speaker and a <a href="https://www.amazon.ca/Books-Nikolas-Charlebois-Laprade/s?rh=n%3A916520%2Cp_27%3ANikolas+Charlebois-Laprade">multi-time book author</a>. I am the owner and creator of the <a href="https://Microsoft365DSC.com">Microsoft365DSC</a> Open-Source solution, and I am based in Gatineau, Quebec (Canada).</p>
