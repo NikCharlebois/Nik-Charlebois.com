@@ -1,16 +1,8 @@
 site_name: Nik Charlebois' Blog
 site_url: https://nikcharlebois.github.io/Nik-Charlebois.com/
 nav:
-  - Home:
-      - 'Introduction': 'index.md'
-      - 'What is Microsoft365DSC?': 'home/what-is-M365DSC.md'
-  - Blog:
-      - 'Blog Posts': 'blog/index.md'
-  - About:
-      - 'Why Microsoft365DSC': 'about/why.md'
-      - 'Changelog': https://github.com/microsoft/Microsoft365DSC/blob/master/CHANGELOG.md" target="_blank
-      - 'License': 'about/license.md'
-      - 'Community Resources': 'about/community-resources.md'
+  - Home: 'index.md'
+  - About Me: 'about.md'
 plugins:
   - search
   - include_dir_to_nav
