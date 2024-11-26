@@ -1,5 +1,5 @@
-site_name: Microsoft365DSC - Your Cloud Configuration
-site_url: https://microsoft.github.io/Microsoft365DSC
+site_name: Crawl, Walk, Run, Autmoate - Nik Charlebois' Blog
+site_url: https://Nik-Charlebois.com
 nav:
   - Home:
       - 'Introduction': 'index.md'
