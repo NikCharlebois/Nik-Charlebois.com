@@ -11,6 +11,10 @@ body {
     color:black !important;
 }
 
+p {
+    text-align: justify;
+}
+
 footer {
     display:none !important;
 }
