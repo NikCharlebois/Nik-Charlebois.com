@@ -1,5 +1,6 @@
 site_name: Nik Charlebois' Blog
 site_url: https://nikcharlebois.github.io/Nik-Charlebois.com/
+repo_url: https://github.com/nikcharlebois/blogtheme
 nav:
   - Home:
       - 'Introduction': 'index.md'
@@ -15,7 +16,7 @@ plugins:
   - search
   - include_dir_to_nav
 theme:
-  name: 'dracula'
+  name: null
   custom_dir: docs/overrides
   logo: /Images/NikProfile.png
   favicon: Images/favicon.ico
