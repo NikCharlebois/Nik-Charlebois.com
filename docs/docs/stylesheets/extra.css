@@ -5,3 +5,7 @@
 .md-sidebar--secondary:not([hidden]) {
     display:hidden;
 }
+
+body {
+    background-color:#FFF !important;
+}
