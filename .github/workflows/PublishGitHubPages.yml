@@ -2,7 +2,7 @@ name: Generate Resources & Deploy GitHub Pages
 on:
   push:
     branches:
-      - Dev
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
