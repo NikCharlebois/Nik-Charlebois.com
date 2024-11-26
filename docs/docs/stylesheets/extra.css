@@ -14,3 +14,7 @@ body {
 footer {
     display:none !important;
 }
+
+.btn-preview {
+    display:none !important;
+}
