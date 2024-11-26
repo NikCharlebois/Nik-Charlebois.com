@@ -15,6 +15,11 @@ p {
     text-align: justify;
 }
 
+.codehilite
+{
+    color:#FFF;
+}
+
 .row-preview {
     display:none !important;
 }
