@@ -1,0 +1,144 @@
+site_name: Microsoft365DSC - Your Cloud Configuration
+site_url: https://microsoft.github.io/Microsoft365DSC
+nav:
+  - Home:
+      - 'Introduction': 'index.md'
+      - 'What is Microsoft365DSC?': 'home/what-is-M365DSC.md'
+  - Blog:
+      - 'Blog Posts': 'blog/index.md'
+  - User Guide:
+      - 'Get Started':
+          - 'Introduction': 'user-guide/get-started/introduction.md'
+          - 'Prerequisites': 'user-guide/get-started/prerequisites.md'
+          - 'Authentication and Permissions': 'user-guide/get-started/authentication-and-permissions.md'
+          - 'Authentication Examples': 'user-guide/get-started/authentication-examples.md'
+          - 'How to Install': 'user-guide/get-started/how-to-install.md'
+          - 'Taking a Snapshot of Existing Tenant': 'user-guide/get-started/snapshot-of-existing-tenant.md'
+          - 'Deploying Configurations': 'user-guide/get-started/deploying-configurations.md'
+          - 'Securing your Compiled Configuration': 'user-guide/get-started/securing-configurations.md'
+          - 'Monitoring for Configuration Drifts': 'user-guide/get-started/monitoring-drifts.md'
+          - 'Cloning Tenant Configurations': 'user-guide/get-started/cloning-tenants.md'
+          - 'Generating Reports from Configurations': 'user-guide/get-started/generating-reports.md'
+          - 'Comparing Configurations': 'user-guide/get-started/comparing-configurations.md'
+          - 'Integrating with Azure DevOps': 'user-guide/get-started/integrating-with-azure-devops.md'
+          - 'Support': 'user-guide/get-started/support.md'
+          - 'Telemetry': 'user-guide/get-started/telemetry.md'
+          - 'PowerShell 7+ Support': 'user-guide/get-started/powershell7-support.md'
+          - 'Troubleshooting': 'user-guide/get-started/troubleshooting.md'
+      - Advanced:
+          - 'Blueprints': 'user-guide/advanced/create-blueprint.md'
+          - 'Dynamic Resource Generator (DRG)': 'user-guide/advanced/dynamic-resource-generator.md'
+      - Cmdlets:
+          - 'Assert-M365DSCBlueprint': 'user-guide/cmdlets/Assert-M365DSCBlueprint.md'
+          - 'Export-M365DSCConfiguration': 'user-guide/cmdlets/Export-M365DSCConfiguration.md'
+          - 'Export-M365DSCDiagnosticData': 'user-guide/cmdlets/Export-M365DSCDiagnosticData.md'
+          - 'Compare-M365DSCConfigurations': 'user-guide/cmdlets/Compare-M365DSCConfigurations.md'
+          - 'Get-M365DSCAllResources': 'user-guide/cmdlets/Get-M365DSCAllResources.md'
+          - 'Get-M365DSCCompiledPermissionList': 'user-guide/cmdlets/Get-M365DSCCompiledPermissionList.md'
+          - 'Get-M365DSCLoggingOption': 'user-guide/cmdlets/Get-M365DSCLoggingOption.md'
+          - 'Get-M365DSCNotificationEndPointRegistration': 'user-guide/cmdlets/Get-M365DSCNotificationEndpointRegistration.md'
+          - 'Get-M365DSCTelemetryOption': 'user-guide/cmdlets/Get-M365DSCTelemetryOption.md'
+          - 'Get-M365DSCWorkloadsListFromResourceNames': 'user-guide/cmdlets/Get-M365DSCWorkloadsListFromResourceNames.md'
+          - 'Import-M365DSCDependencies': 'user-guide/cmdlets/Import-M365DSCDependencies.md'
+          - 'Install-M365DSCDevBranch': 'user-guide/cmdlets/Install-M365DSCDevBranch.md'
+          - 'New-M365DSCDeltaReport': 'user-guide/cmdlets/New-M365DSCDeltaReport.md'
+          - 'New-M365DSCNotificationEndPointRegistration': 'user-guide/cmdlets/New-M365DSCNotificationEndpointRegistration.md'
+          - 'New-M365DSCReportFromConfiguration': 'user-guide/cmdlets/New-M365DSCReportFromConfiguration.md'
+          - 'Remove-M365DSCNotificationEndPointRegistration': 'user-guide/cmdlets/Remove-M365DSCNotificationEndpointRegistration.md'
+          - 'Set-M365DSCAgentCertificateConfiguration': 'user-guide/cmdlets/Set-M365DSCAgentCertificateConfiguration.md'
+          - 'Set-M365DSCLoggingOption': 'user-guide/cmdlets/Set-M365DSCLoggingOption.md'
+          - 'Set-M365DSCTelemetryOption': 'user-guide/cmdlets/Set-M365DSCTelemetryOption.md'
+          - 'Test-M365DSCAgent': 'user-guide/cmdlets/Test-M365DSCAgent.md'
+          - 'Test-M365DSCDependenciesForNewVersions': 'user-guide/cmdlets/Test-M365DSCDependenciesForNewVersions.md'
+          - 'Test-M365DSCModuleValidity': 'user-guide/cmdlets/Test-M365DSCModuleValidity.md'
+          - 'Uninstall-M365DSCOutdatedDependencies': 'user-guide/cmdlets/Uninstall-M365DSCOutdatedDependencies.md'
+          - 'Update-M365DSCAllowedGraphScopes': 'user-guide/cmdlets/Update-M365DSCAllowedGraphScopes.md'
+          - 'Update-M365DSCAzureAdApplication': 'user-guide/cmdlets/Update-M365DSCAzureAdApplication.md'
+          - 'Update-M365DSCDependencies': 'user-guide/cmdlets/Update-M365DSCDependencies.md'
+          - 'Update-M365DSCModule': 'user-guide/cmdlets/Update-M365DSCModule.md'
+  - Contributing:
+      - 'Guidelines': 'contributing/contribution-guidelines.md'
+      - 'Getting started': 'contributing/getting-started.md'
+      - 'Develop a New Resource': 'contributing/develop-new-resource.md'
+  - Concepts:
+      - 'Breaking Changes Policy': 'concepts/breaking-changes.md'
+      - 'Key Parameters in DSC': 'concepts/key-parameters.md'
+      - 'Personas': 'concepts/personas.md'
+  - Resources:
+      - 'Overview': 'resources/overview.md'
+      - 'Azure': 'resources/azure'
+      - 'Azure AD': 'resources/azure-ad'
+      - 'Azure DevOps': 'resources/azure-devops'
+      - 'Defender': 'resources/defender'
+      - 'Exchange': 'resources/exchange'
+      - 'Fabric': 'resources/fabric'
+      - 'General': 'resources/general'
+      - 'Intune': 'resources/intune'
+      - 'Office365': 'resources/office365'
+      - 'OneDrive': 'resources/onedrive'
+      - 'Planner': 'resources/planner'
+      - 'Power Platform': 'resources/power-platform'
+      - 'Security & Compliance': 'resources/security-compliance'
+      - 'Sentinel': 'resources/sentinel'
+      - 'SharePoint': 'resources/sharepoint'
+      - 'Teams': 'resources/teams'
+  - About:
+      - 'Why Microsoft365DSC': 'about/why.md'
+      - 'Changelog': https://github.com/microsoft/Microsoft365DSC/blob/master/CHANGELOG.md" target="_blank
+      - 'License': 'about/license.md'
+      - 'Community Resources': 'about/community-resources.md'
+plugins:
+  - search
+  - include_dir_to_nav
+theme:
+  name: 'material'
+  custom_dir: docs/overrides
+  logo: Images/SmallLogo.png
+  favicon: Images/favicon.ico
+  icon:
+    repo: fontawesome/brands/git-alt
+  palette:
+    - scheme: default
+      primary: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - search.share
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+      toc_depth: 0
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - def_list
+  - attr_list
+  - md_in_html
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: 'https://twitter.com/Microsoft365DSC'
+    - icon: fontawesome/brands/youtube
+      link: 'https://www.youtube.com/channel/UCveScabVT6pxzqYgGRu17iw'
+    - icon: fontawesome/solid/link
+      link: 'https://www.powershellgallery.com/packages/Microsoft365DSC/'
+  generator: false
+  analytics:
+    provider: google
+    property: UA-246073771-1
+extra_css:
+  - stylesheets/extra.css
+repo_url: https://github.com/microsoft/Microsoft365DSC
+edit_uri: tree/Dev/docs/docs
+copyright: Microsoft365DSC
