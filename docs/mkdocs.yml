@@ -17,7 +17,7 @@ plugins:
 theme:
   name: 'dracula'
   custom_dir: docs/overrides
-  logo: Images/SmallLogo.png
+  logo: /Images/NikProfile.png
   favicon: Images/favicon.ico
   icon:
     repo: fontawesome/brands/git-alt
