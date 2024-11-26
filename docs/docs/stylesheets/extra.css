@@ -15,10 +15,6 @@ p {
     text-align: justify;
 }
 
-footer {
-    display:none !important;
-}
-
 .row-preview {
     display:none !important;
 }
