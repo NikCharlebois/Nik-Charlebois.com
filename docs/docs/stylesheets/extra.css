@@ -10,3 +10,7 @@ body {
     background-color:#FFF !important;
     color:black !important;
 }
+
+footer {
+    display:none !important;
+}
