@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: 3.x
       - run: |
-          pip install mkdocs-material
+          pip install mkdocs-dracula-theme
           pip install mkdocs-include-dir-to-nav
       - name: Deploy
         working-directory: ./docs
