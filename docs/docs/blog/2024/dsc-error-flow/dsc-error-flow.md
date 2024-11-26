@@ -55,7 +55,7 @@ Based on the above screenshot, we would <strong>assume</strong> that the overall
     </ul>
 </ul>
 
-Taking a look at Event Viewer, we can confirm the above execution flow:
+<p>Taking a look at Event Viewer, we can confirm the above execution flow:</p>
 ![alt text](image-1.png)
 
 <hr/>
