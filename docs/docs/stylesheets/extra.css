@@ -15,6 +15,10 @@ p {
     text-align: justify;
 }
 
+footer {
+    display:none !important;
+}
+
 .codehilite
 {
     color:#FFF;
