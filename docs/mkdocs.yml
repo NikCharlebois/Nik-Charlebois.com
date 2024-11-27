@@ -9,7 +9,7 @@ plugins:
 theme:
   name: 'material'
   custom_dir: docs/overrides
-  logo: /Images/NikProfile.png
+  logo: /Images/logo.png
   favicon: Images/favicon.ico
   icon:
     repo: fontawesome/brands/git-alt
