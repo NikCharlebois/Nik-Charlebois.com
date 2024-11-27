@@ -1,1 +1,49 @@
 {% extends "base.html" %}
+
+{% block site_nav %}
+  <nav id="sidebar" class="sidebar">
+    <div class="p-4">
+        
+        <img class="logo" src="/Images/NikProfile.png" height="150px">
+    <div class="left-text-center">
+        
+            <span class="left-text left-line-height left-text-white">Nik Charlebois' Blog</span>
+        
+    </div>
+
+    <div class="left-box flex-column">
+        <ul class="dot-ul">
+            <li><div class="dot-li left-bg-cyan"></div></li>
+            <li><div class="dot-li left-bg-green"></div></li>
+            <li><div class="dot-li left-bg-orange"></div></li>
+            <li><div class="dot-li left-bg-pink"></div></li>
+            <li><div class="dot-li left-bg-purple"></div></li>
+            <li><div class="dot-li left-bg-red"></div></li>
+            <li><div class="dot-li left-bg-yellow"></div></li>
+        </ul>
+    </div>
+
+    <hr class="left-divider">
+
+    <!-- block menu -->
+    <ul class="mb-5 left-list left-list-none">
+        
+        <li class="left-box">
+            <a href="." class=" active 
+                left-anchor d-inline-flex align-items-center border-0 left-text-purple--hover">
+                Home
+            </a>
+        </li>
+        <li class="left-box">
+            <a href="about/" class="
+                left-anchor d-inline-flex align-items-center border-0 left-text-purple--hover">
+                About Me
+            </a>
+        </li>
+    </ul>
+    <!-- endblock -->
+</div>
+  </nav>
+  
+<nav class="divider left-bg-purple-cyan"></nav>
+{% endblock %}
