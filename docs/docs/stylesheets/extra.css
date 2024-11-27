@@ -32,6 +32,30 @@
     display: block;
     border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
+.sidebar .custom-menu .btn i {
+    margin-right: 00px;
+    font-size: 18px;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px / 1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
 
 .btn-primary {
     --bs-btn-color: #fff;
