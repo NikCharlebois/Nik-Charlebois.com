@@ -51,6 +51,10 @@ article h1 {
     color:#6c7393
 }
 
+.article-listing {
+    border: 1px solid #a7abbe;
+}
+
 .md-header--shadow {
     box-shadow: none;
 }
