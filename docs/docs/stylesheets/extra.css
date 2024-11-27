@@ -13,6 +13,11 @@
     border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
+.md-content
+{
+    min-width: 100%;
+}
+
 .content {
     width: 100%;
     min-height: 100vh;
