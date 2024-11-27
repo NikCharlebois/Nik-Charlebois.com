@@ -19,7 +19,7 @@
 }
 
 .md-header--shadow {
-    box-shadow: 0;
+    box-shadow: none;
 }
 
 .divider {
@@ -83,6 +83,8 @@ li {
 
 .md-grid {    
     margin-left: unset;
+    margin-right: 25px;
+    max-width: none;
 }
 
 .md-footer, .md-footer-meta {
