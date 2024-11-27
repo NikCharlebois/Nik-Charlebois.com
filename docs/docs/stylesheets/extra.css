@@ -46,6 +46,11 @@ article h1 {
     display: none;
 }
 
+.article-date {
+    font-size: 70%;
+    color:#6c7393
+}
+
 .md-header--shadow {
     box-shadow: none;
 }
