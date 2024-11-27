@@ -1,7 +1,8 @@
 <div class="article-listing">
-<h2>Getting started with Microsoft365DSC</h2>
-<div class="article-date">November 29th, 2024</div>
-<p>Blog post to come</p>
+    <img src="/blog/2024/getting-started-m365dsc/gettingstartedm365dsc.jpg" alt ="Getting Started with Microsoft365DSC" />
+    <h2><a href="/blog/2024/getting-started-m365dsc/index.html">Getting Started with Microsoft365DSC</a></h2>
+    <div class="article-date">November 27th, 2024</div>
+    <p>Introduction to configuring a brand new machine to be able to use Microsoft365DSC to take a snapshot of the configuration of an existing tenant, to monitor the tenant for configuration drifts or to automatically remediate to detected drifts.</p>
 </div>
 
 <div class="article-listing">
