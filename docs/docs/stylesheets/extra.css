@@ -57,6 +57,10 @@ article h1 {
     margin-bottom: 20px;
 }
 
+.article-listing img {
+    float: left;
+}
+
 .md-header--shadow {
     box-shadow: none;
 }
