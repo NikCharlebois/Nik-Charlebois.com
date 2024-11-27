@@ -4,81 +4,81 @@
 
 /* Dracula Theme items */
 .left-bg-black {
-    background-color: var(--black);
+    background-color: var(--black) !important;
 }
 
 .left-text {
-    font-size: var(--font-md);
-    font-family: Fira Code, monospace;
+    font-size: var(--font-md) !important;
+    font-family: Fira Code, monospace !important;
 }
 
 .left-bg-purple-cyan {
-    background: linear-gradient(var(--gradientDegree), var(--purple) 0, var(--cyan) 100%);
+    background: linear-gradient(var(--gradientDegree), var(--purple) 0, var(--cyan) 100%) !important;
 }
 
 .left-text-center {
-    text-align: center;
+    text-align: center !important;
 }
 
 .left-text-white {
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 .left-line-height {
-    line-height: var(--line-height-md);
+    line-height: var(--line-height-md) !important;
 }
 
 .left-box {
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 
 .left-bg-cyan {
-    background-color: var(--cyan);
+    background-color: var(--cyan) !important;
 }
 
 .left-bg-green {
-    background-color: var(--green);
+    background-color: var(--green) !important;
 }
 
 .left-bg-orange {
-    background-color: var(--orange);
+    background-color: var(--orange) !important;
 }
 
 .left-bg-pink {
-    background-color: var(--pink);
+    background-color: var(--pink) !important;
 }
 
 .left-bg-pink {
-    background-color: var(--pink);
+    background-color: var(--pink) !important;
 }
 
 .left-bg-red {
-    background-color: var(--red);
+    background-color: var(--red) !important;
 }
 
 .left-bg-yellow {
-    background-color: var(--yellow);
+    background-color: var(--yellow) !important;
 }
 
 .left-list-none {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
+    list-style: none !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
 }
 
 .left-list {
-    list-style: none;
+    list-style: none !important;
 }
 
 .left-box {
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 .left-box a {
-    color: #fff !important;
+    color: #fff !important !important;
 }
 
 .left-anchor {
-    text-decoration: none;
-    transition: all 0.16s ease-in-out;
+    text-decoration: none !important;
+    transition: all 0.16s ease-in-out !important;
 }
 /* END DRACULA THEME */
