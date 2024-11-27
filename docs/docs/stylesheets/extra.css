@@ -6,6 +6,11 @@
     margin-top: 0;
 }
 
+.md-main {
+    flex-grow: 0;
+    margin-left: unset;
+}
+
 /* Dracula Theme items */
 .left-bg-black {
     background-color: var(--black);
