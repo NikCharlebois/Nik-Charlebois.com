@@ -13,11 +13,6 @@
     border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
-.md-content
-{
-    min-width: 100%;
-}
-
 .md-header--shadow {
     box-shadow: none;
 }
