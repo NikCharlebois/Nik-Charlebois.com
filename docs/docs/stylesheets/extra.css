@@ -24,6 +24,10 @@
     border-radius: 100%;
 }
 
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
 .md-header, .md-tabs {
     background-color: #9580ff;
 }
@@ -90,8 +94,8 @@
     background-color: var(--pink);
 }
 
-.left-bg-pink {
-    background-color: var(--pink);
+.left-bg-purple {
+    background-color: #9580ff;
 }
 
 .left-bg-red {
