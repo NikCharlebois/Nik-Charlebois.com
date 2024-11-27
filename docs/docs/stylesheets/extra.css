@@ -18,6 +18,10 @@
     min-width: 100%;
 }
 
+.md-header--shadow {
+    box-shadow: 0;
+}
+
 .divider {
     min-width: 10px !important;
     flex-shrink: 0;
@@ -79,6 +83,8 @@ li {
 
 .md-grid {    
     margin-left: unset;
+    max-width: 0;
+    margin-right: 10px;
 }
 
 .md-footer, .md-footer-meta {
