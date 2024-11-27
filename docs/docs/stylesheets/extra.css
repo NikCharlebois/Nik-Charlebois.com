@@ -83,8 +83,6 @@ li {
 
 .md-grid {    
     margin-left: unset;
-    max-width: 0;
-    margin-right:10px;
 }
 
 .md-footer, .md-footer-meta {
