@@ -4,6 +4,12 @@
     background-color:#21222c;
 }
 
+.logo {
+    display: block;
+    margin-bottom: 10%;
+    width: 150px !important;
+}
+
 .md-header, .md-tabs {
     background-color: #9580ff;
 }
