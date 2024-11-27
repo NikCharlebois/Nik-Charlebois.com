@@ -6,6 +6,9 @@
 .sidebar ul li {
     font-size: 16px;
 }
+.p-4 {
+    padding: 1.5rem !important;
+}
 
 .sidebar ul li a {
     padding: 10px 0;
