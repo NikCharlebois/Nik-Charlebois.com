@@ -1,3 +1,84 @@
 .md-header, .md-tabs {
     background-color: #9580ff;
 }
+
+/* Dracula Theme items */
+.left-bg-black {
+    background-color: var(--black);
+}
+
+.left-text {
+    font-size: var(--font-md);
+    font-family: Fira Code, monospace;
+}
+
+.left-bg-purple-cyan {
+    background: linear-gradient(var(--gradientDegree), var(--purple) 0, var(--cyan) 100%);
+}
+
+.left-text-center {
+    text-align: center;
+}
+
+.left-text-white {
+    color: var(--white);
+}
+
+.left-line-height {
+    line-height: var(--line-height-md);
+}
+
+.left-box {
+    box-sizing: border-box;
+}
+
+.left-bg-cyan {
+    background-color: var(--cyan);
+}
+
+.left-bg-green {
+    background-color: var(--green);
+}
+
+.left-bg-orange {
+    background-color: var(--orange);
+}
+
+.left-bg-pink {
+    background-color: var(--pink);
+}
+
+.left-bg-pink {
+    background-color: var(--pink);
+}
+
+.left-bg-red {
+    background-color: var(--red);
+}
+
+.left-bg-yellow {
+    background-color: var(--yellow);
+}
+
+.left-list-none {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.left-list {
+    list-style: none;
+}
+
+.left-box {
+    box-sizing: border-box;
+}
+.left-box a {
+    color: #fff !important;
+}
+
+.left-anchor {
+    text-decoration: none;
+    transition: all 0.16s ease-in-out;
+}
+/* END DRACULA THEME */
