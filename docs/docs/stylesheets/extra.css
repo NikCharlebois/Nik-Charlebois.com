@@ -59,6 +59,8 @@ article h1 {
 
 .article-listing img {
     float: left;
+    width: 100px;
+    display: block;
 }
 
 .md-header--shadow {
