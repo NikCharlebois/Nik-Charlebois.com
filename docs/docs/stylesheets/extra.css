@@ -3,6 +3,15 @@
     max-width: 270px;
     background-color:#21222c;
 }
+.sidebar ul li {
+    font-size: 16px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
 
 .logo {
     display: block;
