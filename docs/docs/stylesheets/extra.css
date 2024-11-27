@@ -42,6 +42,10 @@
     margin: 0px;
 }
 
+article h1 {
+    display: none;
+}
+
 .md-header--shadow {
     box-shadow: none;
 }
