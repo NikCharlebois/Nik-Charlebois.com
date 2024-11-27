@@ -10,6 +10,13 @@
     width: 150px !important;
 }
 
+.dot-ul {
+    list-style: none;
+    display: flex;
+    margin: 10px 0 0;
+    padding-left: 23%;
+}
+
 .md-header, .md-tabs {
     background-color: #9580ff;
 }
