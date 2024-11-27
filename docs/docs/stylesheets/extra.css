@@ -18,6 +18,12 @@
     min-width: 100%;
 }
 
+.divider {
+    min-width: 10px !important;
+    flex-shrink: 0;
+    width: 1.5rem;
+}
+
 .content {
     width: 100%;
     min-height: 100vh;
