@@ -3,6 +3,13 @@
     max-width: 270px;
     background-color:#21222c;
 }
+.content {
+    width: 100%;
+    min-height: 100vh;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
 .sidebar ul li {
     font-size: 16px;
 }
