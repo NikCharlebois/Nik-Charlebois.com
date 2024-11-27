@@ -4,6 +4,15 @@
     background-color:#21222c;
     min-height: 100vh;
 }
+.sidebar ul li {
+    font-size: 16px;
+}
+.sidebar ul li a {
+    padding: 10px 0;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
 .content {
     width: 100%;
     min-height: 100vh;
@@ -11,17 +20,8 @@
     -o-transition: .3s;
     transition: .3s;
 }
-.sidebar ul li {
-    font-size: 16px;
-}
 .p-4 {
     padding: 1.5rem !important;
-}
-
-.sidebar ul li a {
-    padding: 10px 0;
-    display: block;
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
 li {
