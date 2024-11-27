@@ -7,7 +7,7 @@ plugins:
   - search
   - include_dir_to_nav
 theme:
-  name: 'dracula'
+  name: 'mterial'
   custom_dir: docs/overrides
   logo: /Images/NikProfile.png
   favicon: Images/favicon.ico
