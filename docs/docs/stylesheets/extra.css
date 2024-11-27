@@ -20,7 +20,7 @@
     margin-left: unset;
 }
 
-.md-footer {
+.md-footer, .md-footer-meta {
     background-color:#21222c;
 }
 
