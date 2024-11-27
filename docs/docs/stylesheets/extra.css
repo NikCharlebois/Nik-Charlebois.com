@@ -59,7 +59,8 @@ article h1 {
 
 .article-listing img {
     float: left;
-    width: 100px;
+    width: 130px;
+    padding: 10px;
     display: block;
 }
 
