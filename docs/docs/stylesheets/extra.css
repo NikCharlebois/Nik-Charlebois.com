@@ -56,6 +56,10 @@ button, input, optgroup, select, textarea {
     line-height: inherit;
 }
 
+.fa-navicon:before, .fa-reorder:before, .fa-bars:before {
+    content: "\f0c9";
+}
+
 .fa {
     display: inline-block;
     font: normal normal normal 14px / 1 FontAwesome;
