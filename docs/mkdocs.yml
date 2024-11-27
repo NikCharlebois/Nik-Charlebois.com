@@ -41,10 +41,10 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/twitter
-      link: 'https://twitter.com/Microsoft365DSC'
+      link: 'https://twitter.com/NikCharlebois'
     - icon: fontawesome/brands/youtube
       link: 'https://www.youtube.com/channel/UCveScabVT6pxzqYgGRu17iw'
-    - icon: fontawesome/solid/link
+    - icon: fontawesome/solid/linkedin
       link: 'https://www.powershellgallery.com/packages/Microsoft365DSC/'
   generator: false
   analytics:

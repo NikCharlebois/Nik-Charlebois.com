@@ -2,6 +2,7 @@
     min-width: 270px;
     max-width: 270px;
     background-color:#21222c;
+    min-height: 100vh;
 }
 .content {
     width: 100%;
