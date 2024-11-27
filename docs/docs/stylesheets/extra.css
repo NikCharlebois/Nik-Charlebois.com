@@ -4,81 +4,134 @@
 
 /* Dracula Theme items */
 .left-bg-black {
-    background-color: var(--black) !important;
+    background-color: var(--black);
 }
 
 .left-text {
-    font-size: var(--font-md) !important;
-    font-family: Fira Code, monospace !important;
+    font-size: var(--font-md);
+    font-family: Fira Code, monospace;
 }
 
 .left-bg-purple-cyan {
-    background: linear-gradient(var(--gradientDegree), var(--purple) 0, var(--cyan) 100%) !important;
+    background: linear-gradient(var(--gradientDegree), var(--purple) 0, var(--cyan) 100%);
 }
 
 .left-text-center {
-    text-align: center !important;
+    text-align: center;
 }
 
 .left-text-white {
-    color: var(--white) !important;
+    color: var(--white);
 }
 
 .left-line-height {
-    line-height: var(--line-height-md) !important;
+    line-height: var(--line-height-md);
 }
 
 .left-box {
-    box-sizing: border-box !important;
+    box-sizing: border-box;
 }
 
 .left-bg-cyan {
-    background-color: var(--cyan) !important;
+    background-color: var(--cyan);
 }
 
 .left-bg-green {
-    background-color: var(--green) !important;
+    background-color: var(--green);
 }
 
 .left-bg-orange {
-    background-color: var(--orange) !important;
+    background-color: var(--orange);
 }
 
 .left-bg-pink {
-    background-color: var(--pink) !important;
+    background-color: var(--pink);
 }
 
 .left-bg-pink {
-    background-color: var(--pink) !important;
+    background-color: var(--pink);
 }
 
 .left-bg-red {
-    background-color: var(--red) !important;
+    background-color: var(--red);
 }
 
 .left-bg-yellow {
-    background-color: var(--yellow) !important;
+    background-color: var(--yellow);
 }
 
 .left-list-none {
-    list-style: none !important;
-    margin-left: 0 !important;
-    padding-left: 0 !important;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .left-list {
-    list-style: none !important;
+    list-style: none;
 }
 
 .left-box {
-    box-sizing: border-box !important;
+    box-sizing: border-box;
 }
 .left-box a {
-    color: #fff !important !important;
+    color: #fff !important;
 }
 
 .left-anchor {
-    text-decoration: none !important;
-    transition: all 0.16s ease-in-out !important;
+    text-decoration: none;
+    transition: all 0.16s ease-in-out;
+}
+
+:root {
+    --black: #21222c;
+    --blackSecondary: #414558;
+    --blackTernary: #a7abbe;
+    --blackLight: rgba(33, 34, 44, 0.05);
+    --grey: #414558;
+    --greySecondary: #626784;
+    --greyTernary: #b6b9c9;
+    --greyLight: rgba(65, 69, 88, 0.05);
+    --white: #f8f8f2;
+    --whiteSecondary: #fff;
+    --whiteLight: hsla(60, 30%, 96%, 0.05);
+    --cyan: #80ffea;
+    --cyanSecondary: #ccfff6;
+    --cyanLight: rgba(128, 255, 234, 0.05);
+    --green: #8aff80;
+    --greenSecondary: #d0ffcc;
+    --greenLight: rgba(138, 255, 128, 0.05);
+    --orange: #ffca80;
+    --orangeSecondary: #ffeacc;
+    --orangeLight: rgba(255, 202, 128, 0.05);
+    --pink: #ff80bf;
+    --pinkSecondary: #ffcce6;
+    --pinkLight: rgba(255, 128, 191, 0.05);
+    --purple: #9580ff;
+    --purpleSecondary: #d4ccff;
+    --purpleLight: rgba(149, 128, 255, 0.05);
+    --red: #ff9580;
+    --redSecondary: #ffd4cc;
+    --redLight: rgba(255, 149, 128, 0.05);
+    --yellow: #ffff80;
+    --yellowSecondary: #ffc;
+    --yellowLight: rgba(255, 255, 128, 0.05);
+    --cyan-transparent: rgba(128, 255, 234, 0.1);
+    --green-transparent: rgba(138, 255, 128, 0.1);
+    --orange-transparent: rgba(255, 202, 128, 0.1);
+    --pink-transparent: rgba(255, 128, 191, 0.1);
+    --purple-transparent: rgba(149, 128, 255, 0.1);
+    --red-transparent: rgba(255, 149, 128, 0.1);
+    --yellow-transparent: rgba(255, 255, 128, 0.1);
+    --disabled: #6c7393;
+    --gradientDegree: 135deg;
+    --glowColor: hsla(0, 0%, 100%, 0.25);
+    --cyan-100: rgba(128, 255, 234, 0.1);
+    --green-100: rgba(138, 255, 128, 0.1);
+    --orange-100: rgba(255, 202, 128, 0.1);
+    --pink-100: rgba(255, 128, 191, 0.1);
+    --purple-100: rgba(149, 128, 255, 0.1);
+    --red-100: rgba(255, 149, 128, 0.1);
+    --yellow-100: rgba(255, 255, 128, 0.1);
+    --cyan-200: rgba(128, 255, 234, 0.2);
 }
 /* END DRACULA THEME */
