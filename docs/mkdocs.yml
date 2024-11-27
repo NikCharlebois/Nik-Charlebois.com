@@ -44,7 +44,7 @@ extra:
       link: 'https://twitter.com/NikCharlebois'
     - icon: fontawesome/brands/youtube
       link: 'https://www.youtube.com/channel/UCveScabVT6pxzqYgGRu17iw'
-    - icon: fontawesome/solid/linkedin
+    - icon: fontawesome/solid/linked
       link: 'https://www.powershellgallery.com/packages/Microsoft365DSC/'
   generator: false
   analytics:
