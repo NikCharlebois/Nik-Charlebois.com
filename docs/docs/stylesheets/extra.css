@@ -37,6 +37,8 @@
     font-size: 18px;
 }
 
+
+
 .md-tabs {
     display: none;
 }
@@ -127,6 +129,10 @@ li {
 
 .md-header, .md-tabs {
     background-color: #9580ff;
+}
+
+body.scroller {
+    scrollbar-color: #9580ff;
 }
 
 .md-main__inner {
