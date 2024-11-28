@@ -62,7 +62,8 @@ Get-DSCLocalConfigurationManager
 
 <p>Click Next on the following screen, leaving the default value to "Automatically select the certificate store based on the type of certificate". Then click <strong>Finish</strong> on the last screen.</p>
 
-<p>To install the certificate in the Local System's store, we recommend </p>
+<p><strong>Note:</strong>When running DSC via the LCM (e.g., with Start-DSCConfiguration or Test-DSCConfiguration) you will also need to put the certificate in the Local Computer store.</p>
+<img src="/blog/2024/getting-started-m365dsc/images/certlocalmachine.png" alt="Install the certificate in the local machine's store." />
 
 <h2>Step 5 - Create a Service Principal</h2>
 <p>As mentionned at the beginning of this article, we will be authenticating to our tenants using a service principal (SPN). In order to create such an SPN, start by navigating to: <a href="https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps">Azure App Registration Portal</a> for your tenant. In the to bar, click on <strong>New registration</strong>.</p>

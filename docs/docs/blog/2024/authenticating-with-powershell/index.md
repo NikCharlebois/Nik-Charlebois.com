@@ -38,6 +38,9 @@ Connect-MgGraph -ClientId '<your app id>' `
 ```
 <img src="/blog/2024/authenticating-with-powershell/images/graphwithmodule.png" alt="Connecting to Microsoft Graph via Microsoft Graph PowerShell SDK." />
 
+<h3>Local Configuration Management</h3>
+<p></p>
+
 <h2>Exchange Online</h2>
 <p>Managing Exchange Online is done via the <a href="https://www.powershellgallery.com/packages/ExchangeOnlineManagement/">ExchangeOnlineManagement</a> module. It is sufficient for you to have the certificate in the current user's store to authenticate. However, in this case, the associated application will also need to be granted the <a href="https://learn.microsoft.com/en-us/powershell/exchange/app-only-auth-powershell-v2?view=exchange-ps#select-and-assign-the-api-permissions-from-the-portal">Manage as App</a> permission, and an Entra Id role sufficient to manage Exchange. Refer to the official Exchange Online documentation for additional details.</p>
 
