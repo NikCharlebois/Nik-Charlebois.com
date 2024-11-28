@@ -1,12 +1,12 @@
 ---
-title: Authenticating to Microsoft 365 with PowerShell
+title: Authenticating to Microsoft Workloads using PowerShell
 ...
 date:
   created: 2024-11-28
 readtime: 10
 ---
 
-<h1>Authenticating to Microsoft 365 with PowerShell</h1>
+<h1>Authenticating to Microsoft Workloads using PowerShell</h1>
 
 <p>In today's world, administrators must have about a dozen different PowerShell modules under their tool belt. It seems as if every workload out there has its own PowerShell module to allow you to administer its related configuration settings; add to this the fact that every module has its own intricacy for how it let's you authenticate. For Entra Id and Intune we have the Microsoft Graph PowerShell SDK, for Teams, we have the Teams PowerShell module, for Exchange Online, there's the Exchange Online Management Shell, etc. To help simplify the overall authentication process, we put together the <a href="https://GitHub.com/Microsoft/MSCloudLoginAssistant">MSCloudLoginAssistant</a> module, which acts as an abstraction layer sitting on top of all these modules and provies a coherent and streamlined way to authenticate to them.</p>
 
