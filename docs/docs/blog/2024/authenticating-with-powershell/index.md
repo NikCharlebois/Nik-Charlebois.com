@@ -106,7 +106,7 @@ Connect-PnPOnline -ClientId '<your app id>' `
                   -Thumbprint '<your thumbprint>' `
                   -Url 'https://<your tenant>-admin.sharepoint.com'
 ```
-<img src="/blog/2024/authenticating-with-powershell/images/pnpModule.png" alt="Connecting to SharePoint Online via PnP.PowerShell." />
+<img src="/blog/2024/authenticating-with-powershell/images/pnpmodule.png" alt="Connecting to SharePoint Online via PnP.PowerShell." />
 
 <h2>Power Platforms</h2>
 <p>Authentication to Power Platforms is handled by the <a href="https://www.powershellgallery.com/packages/Microsoft.PowerApps.Administration.PowerShell/">Microsoft.PowerApps.Administration.PowerShell</a>. This module currently <strong>only supports</strong> placing the certificate in the current user's store. In order to properly authenticate with the module, you will need to make sure you register your service principal as a Power App Management app. For details on how to do this, please refer to the <a href="https://learn.microsoft.com/en-us/power-platform/admin/powershell-create-service-principal#registering-an-admin-management-application">official documentation</a>.</p>
@@ -152,4 +152,4 @@ Connect-MicrosoftTeams -ApplicationId '<your app id>' `
                        -TenantId '<your tenant>.onmicrosoft.com' `
                        -CertificateThumbprint '<your thumbprint>'
 ```
-<img src="/blog/2024/authenticating-with-powershell/images/teamsModule.png" alt="Connecting to Microsoft Teams via MicrosoftTeams." />
+<img src="/blog/2024/authenticating-with-powershell/images/teamsmodule.png" alt="Connecting to Microsoft Teams via MicrosoftTeams." />
