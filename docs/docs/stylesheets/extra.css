@@ -41,6 +41,12 @@
     .sidebar{display:none;}
 }
 
+.md-tabs {
+    display: none;
+}
+@media (max-width : 320px) {
+    .md-tabs{display:block;}
+}
 
 .md-typeset h2 {
     margin: 0px;
