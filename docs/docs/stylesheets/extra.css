@@ -69,6 +69,10 @@ article h1 {
     margin-bottom: 20px;
 }
 
+.md-logo img {
+    border:none;
+}
+
 .helper {
     display: inline-block;
 }
@@ -215,6 +219,7 @@ img {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    border: 3px solid black;
 }
 
 .left-list-none {
