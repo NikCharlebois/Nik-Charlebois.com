@@ -69,7 +69,7 @@ article h1 {
     margin-bottom: 20px;
 }
 
-.md-logo img {
+.md-logo img, .article-listing img, .p-4 img {
     border:none;
 }
 
