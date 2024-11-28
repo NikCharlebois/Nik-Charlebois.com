@@ -1,6 +1,6 @@
 <div class="article-listing">
     <img src="/blog/2024/authenticating-with-powershell/authenticating-with-powershell.jpg" alt ="Authenticating to Microsoft Workloads using PowerShell" />
-    <h2><a href="/blog/2024/authenticating-with-powershell.html">Authenticating to Microsoft Workloads using PowerShell</a></h2>
+    <h2><a href="/blog/2024/authenticating-with-powershell/index.html">Authenticating to Microsoft Workloads using PowerShell</a></h2>
     <div class="article-date">November 28th, 2024</div>
     <p>Overview of how to connect to various Microsoft's cloud workloads using various PowerShell modules, including the MSCloudLoginAssistant module and all native workloads' modules. We also discuss how the Local Configuration Manager (LCM) authenticates and what the certificate require ments are to use Service Principal authentication.</p>
 </div>
