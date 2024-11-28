@@ -112,7 +112,7 @@ Export-M365DSCConfiguration -ApplicationId '<ApplicationId>' -TenantId '<TenantI
 <p>The export process will generate 3 files. The <strong>.ps1</strong> file is known as the configuration file contains the exported configuration content (info about the conditional access policies on your tenant). The <strong>.psd1</strong> file is known as the Configuration Data file and contains specific information about the tenant where the configuration was exported from (e.g., the application id used, the tenant id and the certificat thumbprint). The 3rd file is a copy of the public certificazte (.cer) file that is associated with your Local Configuration Manager service.</p>
 
 <h2>Step 8 - Deploy Configuration Changes</h2>
-<p>The next thing we will do is deploy a new Conditional Access Policy using DSC. To do so, I will go ahead and modify the <strong>M365TenantConfig.ps1</strog> file I extracted at Step 7 above and replace its entire content by the following lines:</p>
+<p>The next thing we will do is deploy a new Conditional Access Policy using DSC. To do so, I will go ahead and modify the <strong>M365TenantConfig.ps1</strong> file I extracted at Step 7 above and replace its entire content by the following lines:</p>
 
 ``` powershell
 param (
