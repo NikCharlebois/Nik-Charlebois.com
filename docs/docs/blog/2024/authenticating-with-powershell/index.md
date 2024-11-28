@@ -39,7 +39,8 @@ Connect-MgGraph -ClientId '<your app id>' `
 <img src="/blog/2024/authenticating-with-powershell/images/graphwithmodule.png" alt="Connecting to Microsoft Graph via Microsoft Graph PowerShell SDK." />
 
 <h3>Local Configuration Management</h3>
-<p></p>
+<p>Because the LCM service runs as the local system, we need to install the certificate in the Local Computer's store as well. If you omit to install the certificate in there as well, the LCM will not be able to authenticate to the Microsoft Graph.</p>
+<img src="/blog/2024/authenticating-with-powershell/images/localmachine.png" alt="Installing the certificate in the Local Machine's store." />
 
 <h2>Exchange Online</h2>
 <p>Managing Exchange Online is done via the <a href="https://www.powershellgallery.com/packages/ExchangeOnlineManagement/">ExchangeOnlineManagement</a> module. It is sufficient for you to have the certificate in the current user's store to authenticate. However, in this case, the associated application will also need to be granted the <a href="https://learn.microsoft.com/en-us/powershell/exchange/app-only-auth-powershell-v2?view=exchange-ps#select-and-assign-the-api-permissions-from-the-portal">Manage as App</a> permission, and an Entra Id role sufficient to manage Exchange. Refer to the official Exchange Online documentation for additional details.</p>
@@ -87,6 +88,9 @@ Connect-IPPSSession -AppId '<your app id>' `
 ```
 <img src="/blog/2024/authenticating-with-powershell/images/scmodule.png" alt="Connecting to Security and Compliance Center via ExchangeOnlineManagement." />
 
+<h3>Local Configuration Management</h3>
+<p>LCM requires the certificate to be installed in the Local Machine's store in order to authenticate.</p>
+
 <h2>SharePoint Online</h2>
 <p>In the case of Microsoft365DSC, the authentication to SharePoint Online is done via the <a href="https://www.powershellgallery.com/packages/PnP.PowerShell/">PnP.PowerShell</a> module. It is sufficient to have the certificate u=in the current user's store to authenticate. You will also need to make sure that the app registration is granted the <strong>Sites.FullControl.All</strong> permission for the <strong>SharePoint API</strong> (not Microsoft Graph!). </p>
 
@@ -111,6 +115,9 @@ Connect-PnPOnline -ClientId '<your app id>' `
 ```
 <img src="/blog/2024/authenticating-with-powershell/images/pnpmodule.png" alt="Connecting to SharePoint Online via PnP.PowerShell." />
 
+<h3>Local Configuration Management</h3>
+<p>LCM requires the certificate to be installed in the Local Machine's store in order to authenticate.</p>
+
 <h2>Power Platforms</h2>
 <p>Authentication to Power Platforms is handled by the <a href="https://www.powershellgallery.com/packages/Microsoft.PowerApps.Administration.PowerShell/">Microsoft.PowerApps.Administration.PowerShell</a>. This module currently <strong>only supports</strong> placing the certificate in the current user's store. In order to properly authenticate with the module, you will need to make sure you register your service principal as a Power App Management app. For details on how to do this, please refer to the <a href="https://learn.microsoft.com/en-us/power-platform/admin/powershell-create-service-principal#registering-an-admin-management-application">official documentation</a>.</p>
 
@@ -134,6 +141,27 @@ Add-PowerAppsAccount -ApplicationId '<your app id>' `
 ```
 <img src="/blog/2024/authenticating-with-powershell/images/powermodule.png" alt="Connecting to Power Platforms via Microsoft.PowerApps.Administration.PowerShell." />
 
+<h3>Local Configuration Management</h3>
+<p>This is where things get a little more complicated. At the time of writing this article, the Power Platforms PowerShell mdule only supports looking into the current user's store and <strong>not</strong> in the local system's one. Because the LCM always runs as the Local System user, this means that we need to install the certificate in the current user's store of....the Local System user (I know, right). Currently, the best way to achieve this is to use a tool such as <a href="https://learn.microsoft.com/en-us/sysinternals/downloads/psexec">PSExec</a> to let you launch the Management Console as the Local System user and install the certificate in its store.</p>
+
+<ul>
+<ol>Download and install the PSTools under <strong>C:\tools</strong></ol>
+<ol>Launch a new PowerShell console as admin.</ol>
+<ol>Browse to C:\tools, and execute <strong>./Psexec.exe -i -s cmd.exe</strong></ol>
+<ol>When prompted, click on <strong>Agree</strong> (only shown if it's the first time you use the tool).</ol>
+<ol>In the new command prompt that appeared, type in <strong>mmc.exe</strong>.</ol>
+<ol>In the contols that opened, press <strong>CTRL+M</strong> to open the add-in selection.</ol>
+<ol>Select the Certificates add-in and choose the <strong>My user account</strong> option. Click on <strong>Finish</strong>, then <strong>Ok</strong>.<br/>
+<img src="/blog/2024/authenticating-with-powershell/images/mycertselect.png" alt="Selecting th user's certificate store for the local system." /></ol>
+<ol>Expand <strong>Certificates - Curent User</strong> and select the <strong>Personal</strong> folder.</ol>
+<ol>In the Object Type panel, right-click and choose <strong>All Tasks > Import</strong><br />
+<img src="/blog/2024/authenticating-with-powershell/images/import.png" alt="Importing a certificate." /></ol>
+<ol>Click <strong>Next</strong> then browse to select the private key (.pfx) for your certificate. You will need to change the file type to <strong>Personal Information Exchange</strong>first.<br/>
+<img src="/blog/2024/authenticating-with-powershell/images/pfximport.png" alt="Importing a private key for a given certificate." /></ol>
+<ol>Click <strong>Next</strong> then provide the password for your private key.</ol>
+<ol>Click <strong>Next</strong> twice and then on <strong>Finish</strong> to complete the import process.</ol>
+</ul>
+
 <h2>Teams</h2>
 <p>Authentication to Microsof Teams is handled by the <a href = "https://www.powershellgallery.com/packages/MicrosoftTeams/">MicrosoftTeams</a> PowerShell module. Just like all the other modules, it supports placing the certificate in the current user's store.</p>
 
@@ -156,3 +184,6 @@ Connect-MicrosoftTeams -ApplicationId '<your app id>' `
                        -CertificateThumbprint '<your thumbprint>'
 ```
 <img src="/blog/2024/authenticating-with-powershell/images/teamsmodule.png" alt="Connecting to Microsoft Teams via MicrosoftTeams." />
+
+<h3>Local Configuration Management</h3>
+<p>LCM requires the certificate to be installed in the Local Machine's store in order to authenticate.</p>
