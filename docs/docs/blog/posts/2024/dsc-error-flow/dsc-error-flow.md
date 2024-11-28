@@ -11,7 +11,7 @@ To better illustrate the options that are available to the users, I’ve created
 Controlling the error flow in DSC is limited to using the -ErrorAction parameter with Continue or Stop when calling into the Start-DSCConfiguration cmdlet, or by specifying dependencies between resource instances in your configuration using the DependsOn parameter. <strong>One thing that is very important to understand is that the -ErrorAction parameter only takes effect when the Start-DSCConfiguration cmdlet is ran synchronously with the -Wait switch, otherwise the execution will default to -ErrorAction 'Continue'.</strong> For each example below, I will highlight the resources’ methods that were called by the LCM service.
 
 <h2>Example 1a - No Dependencies – Fail in Test – ErrorAction Continue</h2>
-In this example, we’ve defined a configuration that defines 3 resource instances, and no inter-dependencies between any of them.
+In this example, we've defined a configuration that defines 3 resource instances, and no inter-dependencies between any of them.
 
 ![alt text](image-20.png)
 
