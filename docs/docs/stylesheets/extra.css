@@ -37,6 +37,10 @@
     font-size: 18px;
 }
 
+@media (max-width : 320px) {
+    .sidebar{display:none;}
+}
+
 
 .md-typeset h2 {
     margin: 0px;
