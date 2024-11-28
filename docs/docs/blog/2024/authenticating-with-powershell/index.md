@@ -155,7 +155,7 @@ Add-PowerAppsAccount -ApplicationId '<your app id>' `
 <img src="/blog/2024/authenticating-with-powershell/images/mycertselect.png" alt="Selecting th user's certificate store for the local system." /></ol>
 <ol>Expand <strong>Certificates - Curent User</strong> and select the <strong>Personal</strong> folder.</ol>
 <ol>In the Object Type panel, right-click and choose <strong>All Tasks > Import</strong><br />
-<img src="/blog/2024/authenticating-with-powershell/images/import.png" alt="Importing a certificate." /></ol>
+<img src="/blog/2024/authenticating-with-powershell/images/importcert.png" alt="Importing a certificate." /></ol>
 <ol>Click <strong>Next</strong> then browse to select the private key (.pfx) for your certificate. You will need to change the file type to <strong>Personal Information Exchange</strong>first.<br/>
 <img src="/blog/2024/authenticating-with-powershell/images/pfximport.png" alt="Importing a private key for a given certificate." /></ol>
 <ol>Click <strong>Next</strong> then provide the password for your private key.</ol>
