@@ -1,3 +1,8 @@
+---
+date:
+  created: 2024-06-28
+readtime: 20
+---
 <h1>Deep-Dive into the Local Configuration Manager (LCM) Error Flow</h1>
 <div style="position:inherit;padding-top:15px;"><span style="float:left;padding-left:15px;"><p><strong>by Nik Charlebois</strong><br />
 June 28th, 2024</p></span></div>

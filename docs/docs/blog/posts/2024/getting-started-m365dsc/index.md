@@ -1,6 +1,4 @@
 ---
-title: Getting Started with Microsoft365DSC
-...
 date:
   created: 2024-11-27
 readtime: 15
