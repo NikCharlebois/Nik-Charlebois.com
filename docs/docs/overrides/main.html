@@ -54,6 +54,11 @@ $(window).scroll(function() {
             'display': 'none'
         });
     }
+    else if ($(this).scrollTop() <= 200) { //use `this`, not `document`
+        $('.sidebar').css({
+            'display': 'block'
+        });
+    }
 });
 </script>
 {% endblock %}
