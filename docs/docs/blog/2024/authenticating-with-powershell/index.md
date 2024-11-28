@@ -3,7 +3,7 @@ title: Authenticating to Microsoft 365 with PowerShell
 ...
 date:
   created: 2024-11-28
-readtime: 15
+readtime: 10
 ---
 
 <h1>Authenticating to Microsoft 365 with PowerShell</h1>
@@ -11,6 +11,8 @@ readtime: 15
 <p>In today's world, administrators must have about a dozen different PowerShell modules under their tool belt. It seems as if every workload out there has its own PowerShell module to allow you to administer its related configuration settings; add to this the fact that every module has its own intricacy for how it let's you authenticate. For Entra Id and Intune we have the Microsoft Graph PowerShell SDK, for Teams, we have the Teams PowerShell module, for Exchange Online, there's the Exchange Online Management Shell, etc. To help simplify the overall authentication process, we put together the <a href="https://GitHub.com/Microsoft/MSCloudLoginAssistant">MSCloudLoginAssistant</a> module, which acts as an abstraction layer sitting on top of all these modules and provies a coherent and streamlined way to authenticate to them.</p>
 
 <p>In today's article, I want to spend time walking down the authentication stack for each of the major workloads that are supported by <a href="https://Microsoft365DSC.com">Microsoft365DSC</a>. For each one, we will describe how to authenticate using MSCloudLoginAssistant, but we'll also double click on how this module in turns authenticate to the lower layers by calling the workloads' specific PowerShell module directly. As part of this article, we will only focus on the Service Principal with certificate thumbprint flow. We will not cover the process of configuring a new App Registration in Entra ID as part of the article as therer are plenty of literature on the topic out there. We simply assume that you created your own app registration, and uploaded a certificate's public key to it, and that you have access to install the associated private key on your mahcine.</p>
+
+<p>For each workload we will provide the instructions to connect via the MSCloudLoginAssistant module, via its native PowerShell module and we will provide additional information about how you can leverage Microsoft365DSC to have the Local Configuration Manager (LCM) service authenticate. It is important to understand that the LCM always runs in the context of the Local System and therefore having the certificate stored in the current user's store is not sufficient in a lot of cases.</p>
 
 <h2>Microsoft Graph (Entra Id and Intune)</h2>
 <p>Both of the Entra Id and Intune workloads in Microsoft365DSC are leveraging the various <a href="https://www.powershellgallery.com/packages/Microsoft.Graph.Authentication/">Microsoft.Graph.*</a> PowerShell modules. In order to authenticate with the Microsoft Graph PowerShell module, you simply need to have the certificate stored in your current user's store.</p>
