@@ -46,4 +46,14 @@
   </nav>
   
 <nav class="divider left-bg-purple-cyan"></nav>
+
+<script type="text/javascript">
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 200) { //use `this`, not `document`
+        $('.sidebar').css({
+            'display': 'none'
+        });
+    }
+});
+</script>
 {% endblock %}
