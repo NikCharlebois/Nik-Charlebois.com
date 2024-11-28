@@ -213,7 +213,7 @@ Test-DSCConfiguration -Detailed
 
 <img src="/blog/2024/getting-started-m365dsc/images/driftinfo.png" alt="Information about the detected drift." />
 
-<h2>Automatically Remediate to Configuration Drifts</h2>
+<h2>Step 10 - Automatically Remediate to Configuration Drifts</h2>
 <p>The last topic we will cover as part of this blog post, is the auto-remediation feature of PowerShell Desired State Configuration. By default, our LCM service is set in <strong>ApplyAndMonitor</strong> mode.</p>
 <img src="/blog/2024/getting-started-m365dsc/images/applyandmonitor.png" alt="LCM's configuration mode." />
 
