@@ -49,15 +49,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(window).scroll(function() {
-    if ($(this).scrollTop() > 200) { //use `this`, not `document`
-        $('.sidebar').css({
-            'display': 'none'
-        });
-    }
-    else if ($(this).scrollTop() <= 200) { //use `this`, not `document`
-        $('.sidebar').css({
-            'display': 'block'
-        });
+    if ($(window).screen.width > 600)
+    {
+        if ($(this).scrollTop() > 200) { //use `this`, not `document`
+            $('.sidebar').css({
+                'display': 'none'
+            });
+        }
+        else if ($(this).scrollTop() <= 200) { //use `this`, not `document`
+            $('.sidebar').css({
+                'display': 'block'
+            });
+        }
     }
 });
 </script>
