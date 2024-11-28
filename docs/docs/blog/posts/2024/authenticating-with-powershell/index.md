@@ -183,3 +183,12 @@ Connect-MicrosoftTeams -ApplicationId '<your app id>' `
 
 <h3>Local Configuration Management</h3>
 <p>LCM requires the certificate to be installed in the Local Machine's store in order to authenticate.</p>
+
+<script src="https://utteranc.es/client.js"
+        repo="NikCharlebois/Nik-Charlebois.com"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

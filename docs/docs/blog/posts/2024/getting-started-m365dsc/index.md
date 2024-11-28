@@ -242,3 +242,12 @@ Get-DSCLocalConfigurationManager
 <img src="/blog/posts/2024/getting-started-m365dsc/images/applyautocorrect.png" alt="Set the LCM in ApplyAndAutocorrect mode." />
 
 <p>Once this is properly set, the LCM service will automatically fix any detected drift by re-applying the good known configuration for the instance the next time is executes, which in my case is every 15 minutes (ConfigurationModeFrequencyMins).</p>
+
+<script src="https://utteranc.es/client.js"
+        repo="NikCharlebois/Nik-Charlebois.com"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

@@ -813,3 +813,12 @@ Based on the above screenshot, we would <strong>assume</strong> that the overall
 Taking a look at Event Viewer, we again observe that the other items in the main sequential path have their Test method being executed. Items that are not in the main sequential path don't if their parent dependency failed.
 
 ![alt text](image-28.png)
+
+<script src="https://utteranc.es/client.js"
+        repo="NikCharlebois/Nik-Charlebois.com"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
