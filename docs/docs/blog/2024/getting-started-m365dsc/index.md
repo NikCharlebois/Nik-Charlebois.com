@@ -1,3 +1,7 @@
+---
+title: Getting Started with Microsoft365DSC
+---
+
 <h1>Getting Started with Microsoft365DSC</h1>
 <div style="position:inherit;padding-top:15px;"><span style="float:left;padding-left:15px;"><p><strong>by Nik Charlebois</strong><br />
 November 29th, 2024</p></span></div>
