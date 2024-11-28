@@ -10,7 +10,7 @@ November 29th, 2024</p></span></div>
 <p>Open a new Windows PowerShell (version 5.1) windows as an administrator.</p>
 <img src="/blog/2024/getting-started-m365dsc/images/runpowershellasadmin.png" alt="Run PowerShell as Admin" />
 
-<p>Run the following line of PowerShell code. This will pull the Microsoft365DSC modul from the <a href="https://PowerShellGallery.com">PowerShell Gallery</a> and install it on the machine under the path <em>c:\Program Files\WindowsPowerShell\Modules\Microsoft365DSC\<version></em></p>
+<p>Run the following line of PowerShell code. This will pull the Microsoft365DSC module from the <a href="https://PowerShellGallery.com">PowerShell Gallery</a> and install it on the machine under the path <em>c:\Program Files\WindowsPowerShell\Modules\Microsoft365DSC\<version></em></p>
 ``` powershell
 Install-Module Microsoft365DSC -Force
 ```
