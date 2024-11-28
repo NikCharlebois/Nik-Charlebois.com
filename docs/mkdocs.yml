@@ -6,7 +6,6 @@ nav:
 plugins:
   - search
   - include_dir_to_nav
-  - blog
 theme:
   name: 'material'
   custom_dir: docs/overrides
