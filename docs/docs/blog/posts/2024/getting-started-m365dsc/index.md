@@ -2,7 +2,8 @@
 title: Getting Started with Microsoft365DSC
 ---
 
-<h1>Getting Started with Microsoft365DSC</h1>
+<h1 class="blog-title">Getting Started with Microsoft365DSC</h1>
+<div class="article-date">2024-11-27</div>
 <p>In this article, we will guide you through all the steps involved in getting up and running with <a href="https://Microsoft365DSC.com">Microsoft365DSC</a>. For the purpose of this article, I created a brand new Windows Server 2025 virtual machine and this is the environment I will be using throughout this blog post. Please note that we will also be using Windows PowerShell 5.1 for all steps described below. It is important to note that at the time of writing this article, the latest Microsoft365DSC version was <strong>1.24.1127.1</strong>. Also, while it is possible for you to export the configuration of an existing tenant using administrator credentials, for the purpose of this article, we will use the recommended authentication approach which is to use a Service Principal to authenticate with a certificate to secure the connection.</p>
 
 <h2>Step 1 - Install the Core Microsoft365DSC Module</h2>
