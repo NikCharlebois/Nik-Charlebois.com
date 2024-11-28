@@ -37,6 +37,9 @@
     font-size: 18px;
 }
 
+h1.blog-title {
+    display:inline;
+}
 
 
 .md-tabs {
