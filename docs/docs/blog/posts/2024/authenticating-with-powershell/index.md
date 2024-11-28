@@ -1,6 +1,4 @@
 ---
-title: Authenticating to Microsoft Workloads using PowerShell
-...
 date:
   created: 2024-11-28
 readtime: 10
