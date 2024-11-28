@@ -37,15 +37,14 @@
     font-size: 18px;
 }
 
-@media (max-width : 320px) {
-    .sidebar{display:none;}
-}
-
 .md-tabs {
     display: none;
 }
-@media (max-width : 320px) {
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
     .md-tabs{display:block;}
+    .sidebar{display:none;}
 }
 
 .md-typeset h2 {
