@@ -41,15 +41,6 @@ h1.blog-title {
     display:inline;
 }
 
-.utterance {
-    max-width:none;
-}
-
-.utterance-frame {
-    width:100%""
-}
-
-
 .md-tabs {
     display: none;
 }
