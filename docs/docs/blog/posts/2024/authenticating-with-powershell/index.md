@@ -1,4 +1,6 @@
-
+---
+title: Authenticating to Microsoft Workloads using PowerShell
+---
 
 <h1 class="blog-title">Authenticating to Microsoft Workloads using PowerShell</h1>
 <div class="article-date">2024-11-28</div>

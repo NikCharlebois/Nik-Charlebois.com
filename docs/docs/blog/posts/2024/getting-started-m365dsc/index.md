@@ -1,7 +1,5 @@
 ---
-date:
-  created: 2024-11-27
-readtime: 15
+title: Getting Started with Microsoft365DSC
 ---
 
 <h1>Getting Started with Microsoft365DSC</h1>
