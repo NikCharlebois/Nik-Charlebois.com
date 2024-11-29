@@ -10,12 +10,12 @@ title: Authenticating to Microsoft Workloads using PowerShell
 
 <p>For each workload we will provide the instructions to connect via the MSCloudLoginAssistant module, via its native PowerShell module and we will provide additional information about how you can leverage Microsoft365DSC to have the Local Configuration Manager (LCM) service authenticate. It is important to understand that the LCM always runs in the context of the Local System and therefore having the certificate stored in the current user's store is not sufficient in a lot of cases.</p>
 
-<h2 id="Graph">Microsoft Graph (Entra Id and Intune)<a href="Graph" class="anchor">⚓</a></h2>
+<h2 id="Graph">Microsoft Graph (Entra Id and Intune)<a href="#Graph" class="anchor">⚓</a></h2>
 <p>Both of the Entra Id and Intune workloads in Microsoft365DSC are leveraging the various <a href="https://www.powershellgallery.com/packages/Microsoft.Graph.Authentication/">Microsoft.Graph.*</a> PowerShell modules. In order to authenticate with the Microsoft Graph PowerShell module, you simply need to have the certificate stored in your current user's store.</p>
 
 <img src="/blog/posts/2024/authenticating-with-powershell/images/certlocaluser.png" alt="Certificate in the local user's store." />
 
-<h3 id="GraphMSCloud">Via MSCloudLoginAssistant<a href="GraphMSCloud" class="anchor">⚓</a></h3>
+<h3 id="GraphMSCloud">Via MSCloudLoginAssistant<a href="#GraphMSCloud" class="anchor">⚓</a></h3>
 
 ``` powershell
 Connect-M365Tenant -Workload 'MicrosoftGraph' `
@@ -25,7 +25,7 @@ Connect-M365Tenant -Workload 'MicrosoftGraph' `
 ```
 <img src="/blog/posts/2024/authenticating-with-powershell/images/graphmscloud.png" alt="Connecting to Microsoft Graph via MSCloudLoginAssistant." />
 
-<h3 id="GraphModule">Via Microsoft.Graph.Authentication<a href="GraphModule" class="anchor">⚓</a></h3>
+<h3 id="GraphModule">Via Microsoft.Graph.Authentication<a href="#GraphModule" class="anchor">⚓</a></h3>
 
 ``` powershell
 Connect-MgGraph -ClientId '<your app id>' `
@@ -34,14 +34,14 @@ Connect-MgGraph -ClientId '<your app id>' `
 ```
 <img src="/blog/posts/2024/authenticating-with-powershell/images/graphwithmodule.png" alt="Connecting to Microsoft Graph via Microsoft Graph PowerShell SDK." />
 
-<h3 id="GraphLCM">Local Configuration Management<a href="GraphLCM" class="anchor">⚓</a></h3>
+<h3 id="GraphLCM">Local Configuration Management<a href="#GraphLCM" class="anchor">⚓</a></h3>
 <p>Because the LCM service runs as the local system, we need to install the certificate in the Local Computer's store as well. If you omit to install the certificate in there as well, the LCM will not be able to authenticate to the Microsoft Graph.</p>
 <img src="/blog/posts/2024/authenticating-with-powershell/images/localmachine.png" alt="Installing the certificate in the Local Machine's store." />
 
-<h2 id="EXO">Exchange Online<a href="EXO" class="anchor">⚓</a></h2>
+<h2 id="EXO">Exchange Online<a href="#EXO" class="anchor">⚓</a></h2>
 <p>Managing Exchange Online is done via the <a href="https://www.powershellgallery.com/packages/ExchangeOnlineManagement/">ExchangeOnlineManagement</a> module. It is sufficient for you to have the certificate in the current user's store to authenticate. However, in this case, the associated application will also need to be granted the <a href="https://learn.microsoft.com/en-us/powershell/exchange/app-only-auth-powershell-v2?view=exchange-ps#select-and-assign-the-api-permissions-from-the-portal">Manage as App</a> permission, and an Entra Id role sufficient to manage Exchange. Refer to the official Exchange Online documentation for additional details.</p>
 
-<h3 id="EXOMSCloud">Via MSCloudLoginAssistant<a href="EXOMSCloud" class="anchor">⚓</a></h3>
+<h3 id="EXOMSCloud">Via MSCloudLoginAssistant<a href="#EXOMSCloud" class="anchor">⚓</a></h3>
 
 ``` powershell
 Connect-M365Tenant -Workload 'ExchangeOnline' `
@@ -61,7 +61,7 @@ Connect-ExchangeOnline -AppId '<your app id>' `
 ```
 <img src="/blog/posts/2024/authenticating-with-powershell/images/exomodule.png" alt="Connecting to Exchange Online via ExchangeOnlineManagement." />
 
-<h3 id="EXOLCM">Local Configuration Management<a href="EXOLCM" class="anchor">⚓</a></h3>
+<h3 id="EXOLCM">Local Configuration Management<a href="#EXOLCM" class="anchor">⚓</a></h3>
 <p>LCM requires the certificate to be installed in the Local Machine's store in order to authenticate.</p>
 
 <h2 id="SC">Security and Compliance (Defender & Purview)<a href="#SC" class="anchor">⚓</a></h2>
