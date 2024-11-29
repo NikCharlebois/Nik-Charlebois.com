@@ -6,7 +6,7 @@ title: Getting Started with Microsoft365DSC
 <div class="article-date">2024-11-27</div>
 <p>In this article, we will guide you through all the steps involved in getting up and running with <a href="https://Microsoft365DSC.com">Microsoft365DSC</a>. For the purpose of this article, I created a brand new Windows Server 2025 virtual machine and this is the environment I will be using throughout this blog post. Please note that we will also be using Windows PowerShell 5.1 for all steps described below. It is important to note that at the time of writing this article, the latest Microsoft365DSC version was <strong>1.24.1127.1</strong>. Also, while it is possible for you to export the configuration of an existing tenant using administrator credentials, for the purpose of this article, we will use the recommended authentication approach which is to use a Service Principal to authenticate with a certificate to secure the connection.</p>
 
-<h2>Step 1 - Install the Core Microsoft365DSC Module</h2>
+<h2 id="step1">Step 1 - Install the Core Microsoft365DSC Module<a href="#step1" class="anchor">⚓</a></h2>
 
 <p>Open a new Windows PowerShell (version 5.1) windows as an administrator.</p>
 <img src="/blog/posts/2024/getting-started-m365dsc/images/runpowershellasadmin.png" alt="Run PowerShell as Admin" />
@@ -19,7 +19,7 @@ Install-Module Microsoft365DSC -Force
 <p>If prompted to install the latest version of the nuget provider, type in <strong>Y</strong>.</p>
 <img src="/blog/posts/2024/getting-started-m365dsc/images/installnuget.png" alt="Install the latest version of the nuget provider." />
 
-<h2>Step 2- Update Dependencies</h2>
+<h2 id="step2">Step 2- Update Dependencies<a href="#step2" class="anchor">⚓</a></h2>
 <p>Microsoft365DSC depends on about a dozen different other modules (e.g., the Exchange Online Management Shell, the Teams PowerShell Moduel, the Graph PowerShell SDK, etc.). The previous step <strong>only</strong> installed the core Microsoft365DSC PowerShell module, but di not install any of its dependencies, which are required for the module to run properly. The next step of the installation consists of downloading and installing all of these dependencies. If you are curious to understand what all these dependencies are, you can refer to the <a href="https://github.com/microsoft/Microsoft365DSC/blob/Dev/Modules/Microsoft365DSC/Dependencies/Manifest.psd1">Microsoft365DSC Dependency Manifest</a> file. In order to download and install all these dependencies, simply run the following PowerShell cmdlet.</p>
 
 ``` powershell
@@ -29,7 +29,7 @@ Update-M365DSCModule
 <img src="/blog/posts/2024/getting-started-m365dsc/images/installingdependencies.png" alt="Install all the Microsoft365DSC dependencies." />
 <p><strong>Note:</strong> Running this command will automatically download all the dependencies from the PowerShell Gallery and install them under <em>C:\Program Files\WindowsPowerShell\Modules\</em>.</p>
 
-<h2>Step 3 - Configure the Agent & Generate the Certificate</h2>
+<h2 id="step3">Step 3 - Configure the Agent & Generate the Certificate<a href="#step3" class="anchor">⚓</a></h2>
 <p>The next thing we need to do is generate a certificate which will serve a dual purpose. On one hand, it will secure our authentication process with our service principal, and on the other hand it will encrypt our compiled DSC configuration file to ensure we don't expose any plaintext passwords or secrets. As part of the Microsoft365DSc module, we provide a single cmdlets which allows you to generate the certificate and automatically configure the Local Configuration Manager (LCM) service so that it can use it to decrypt our configuration files. To initiate the process, run the following PowerShell command:</p>
 
 ``` powershell
@@ -48,7 +48,7 @@ Get-DSCLocalConfigurationManager
 ```
 <img src="/blog/posts/2024/getting-started-m365dsc/images/lcmcertificate.png" alt="LCM's certificate configuration." />
 
-<h2>Step 4 - Install the Certificate on the Machine</h2>
+<h2 id="step4">Step 4 - Install the Certificate on the Machine<a href="#step4" class="anchor">⚓</a></h2>
 <p>Once you've confirmed that the LCM is properly configured, the next step is to install the certificate's private key on the machine where you will be running Microsoft365DSC from. To install the certificate in this location, simply double click on the .pfx file and select the Current User as the store location.</p>
 
 <img src="/blog/posts/2024/getting-started-m365dsc/images/currentuserstorecertificate.png" alt="Installing the certificate's private key in the current user store." />
@@ -62,7 +62,7 @@ Get-DSCLocalConfigurationManager
 <p><strong>Note:</strong>When running DSC via the LCM (e.g., with Start-DSCConfiguration or Test-DSCConfiguration) you will also need to put the certificate in the Local Computer store.</p>
 <img src="/blog/posts/2024/getting-started-m365dsc/images/certlocalmachine.png" alt="Install the certificate in the local machine's store." />
 
-<h2>Step 5 - Create a Service Principal</h2>
+<h2 id="step5">Step 5 - Create a Service Principal<a href="#step5" class="anchor">⚓</a></h2>
 <p>As mentionned at the beginning of this article, we will be authenticating to our tenants using a service principal (SPN). In order to create such an SPN, start by navigating to: <a href="https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps">Azure App Registration Portal</a> for your tenant. In the to bar, click on <strong>New registration</strong>.</p>
 
 <img src="/blog/posts/2024/getting-started-m365dsc/images/newappregistration.png" alt="New Azure app registration." />
@@ -81,7 +81,7 @@ Get-DSCLocalConfigurationManager
 
 <p>In the context of Microsoft365DSC, this value is known as the <strong>TenantId</strong> property.</p>
 
-<h2>Step 6 - Grant Permission to the Service Principal</h2>
+<h2 id="step6">Step 6 - Grant Permission to the Service Principal<a href="#step6" class="anchor">⚓</a></h2>
 <p>By default, our service principal only has access to read the current user's profile. In order for us to be able to either take a snapshot, monitor or make changes to a configuration setting via DSC, we need to grant it the appropriate API permissions. For the purpose of this article, we will focus on the <strong>Entra ID Conditional Access Policies</strong>. To learn more about the required permissions for all other DSc resources, please refer to the official website at <a href="https://Microsoft365DSC.com">https://Microsoft365DSC.com</a>. We can determine what the required permissions for any given DSC resource are by looking at its associated <em>settings.json</em> file. For example, in the case of the AADConditionalAccessPolicy resource, which is the resource associated with Entra ID Conditional Access Policies, the setting file can be found at <a href="https://github.com/microsoft/Microsoft365DSC/blob/Dev/Modules/Microsoft365DSC/DSCResources/MSFT_AADConditionalAccessPolicy/settings.json">https://github.com/microsoft/Microsoft365DSC/blob/Dev/Modules/Microsoft365DSC/DSCResources/MSFT_AADConditionalAccessPolicy/settings.json</a>.</p>
 
 <p>In the case of DSC, we are only interested in the application permissions and can disregard the delegated permissions since the solution only deals with app-only permissions in the context of a Service Principal. By looking at the file, we see that we are listing both the permissions for the <strong>read</strong> and <strong>update</strong> scenarios.</p>
@@ -100,7 +100,7 @@ Get-DSCLocalConfigurationManager
 
 <img src="/blog/posts/2024/getting-started-m365dsc/images/greencheckmarks.png" alt="Permission grant consent successful." />
 
-<h2>Step 7 - Take a Snapshot</h2>
+<h2 id="step7">Step 7 - Take a Snapshot<a href="#step7" class="anchor">⚓</a></h2>
 <p>We are finally ready to start and take a snapshot of our tenant. Make sure you open a new PowerShell consol running as admin and type in the following command, making sure to replace the ApplicationId, TenantId and CertificateThumbprint parameters by the values you noted in Step 5 above.</p>
 
 ``` powershell
@@ -113,7 +113,7 @@ Export-M365DSCConfiguration -ApplicationId '<ApplicationId>' -TenantId '<TenantI
 
 <p>The export process will generate 3 files. The <strong>.ps1</strong> file is known as the configuration file contains the exported configuration content (info about the conditional access policies on your tenant). The <strong>.psd1</strong> file is known as the Configuration Data file and contains specific information about the tenant where the configuration was exported from (e.g., the application id used, the tenant id and the certificat thumbprint). The 3rd file is a copy of the public certificazte (.cer) file that is associated with your Local Configuration Manager service.</p>
 
-<h2>Step 8 - Deploy Configuration Changes</h2>
+<h2 id="step8">Step 8 - Deploy Configuration Changes<a href="#step8" class="anchor">⚓</a></h2>
 <p>The next thing we will do is deploy a new Conditional Access Policy using DSC. To do so, I will go ahead and modify the <strong>M365TenantConfig.ps1</strong> file I extracted at Step 7 above and replace its entire content by the following lines:</p>
 
 ``` powershell
@@ -195,7 +195,7 @@ Start-DSCConfiguration M365TenantConfig -Wait -Verbose -Force
 
 <img src="/blog/posts/2024/getting-started-m365dsc/images/testingdeployment.png" alt="Confirming the deployment via the Azure portal." />
 
-<h2>Step 9 - Monitoring for Configuration Drifts</h2>
+<h2 id="step9">Step 9 - Monitoring for Configuration Drifts<a href="#step9" class="anchor">⚓</a></h2>
 <p>By default, once you've deployed a configuration file as shown in Step 8 above, the monitoring service is started by default and all drifts will be reported in the Event Viewer. In our case, we will go via the Azure portal, and force a configuration drift. In my case, I will go and disaable the policy (instead of having it in Report Only mode).</p>
 
 <img src="/blog/posts/2024/getting-started-m365dsc/images/causedadrift.png" alt="Changing the policy enablement." />
@@ -211,7 +211,7 @@ Test-DSCConfiguration -Detailed
 
 <img src="/blog/posts/2024/getting-started-m365dsc/images/driftinfo.png" alt="Information about the detected drift." />
 
-<h2>Step 10 - Automatically Remediate to Configuration Drifts</h2>
+<h2 id="step10">Step 10 - Automatically Remediate to Configuration Drifts<a href="#step10" class="anchor">⚓</a></h2>
 <p>The last topic we will cover as part of this blog post, is the auto-remediation feature of PowerShell Desired State Configuration. By default, our LCM service is set in <strong>ApplyAndMonitor</strong> mode.</p>
 <img src="/blog/posts/2024/getting-started-m365dsc/images/applyandmonitor.png" alt="LCM's configuration mode." />
 
