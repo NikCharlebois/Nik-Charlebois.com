@@ -38,7 +38,7 @@
 }
 
 .timeline-header em {
-    display: none;
+    display: none !important;
 }
 
 h1.blog-title {
