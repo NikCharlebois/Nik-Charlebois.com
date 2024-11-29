@@ -1,4 +1,11 @@
 <div class="article-listing">
+    <img src="/blog/posts/2024/m365dsc-performance-considerations/m365dsc-performance-considerations.webp" alt ="Performance Considerations for Microsoft365DSC" />
+    <h2><a href="/blog/posts/2024/m365dsc-performance-considerations/index.html">Performance Considerations for Microsoft365DSC</a></h2>
+    <div class="article-date">November 29th, 2024</div>
+    <p>Discusses different approaches and considerations to improve the overall performance of Microsoft365DSC when taking snapshots, monitoring for configuration drifts or when deploying changes.</p>
+</div>
+
+<div class="article-listing">
     <img src="/blog/posts/2024/authenticating-with-powershell/authenticating-with-powershell.jpg" alt ="Authenticating to Microsoft Workloads using PowerShell" />
     <h2><a href="/blog/posts/2024/authenticating-with-powershell/index.html">Authenticating to Microsoft Workloads using PowerShell</a></h2>
     <div class="article-date">November 28th, 2024</div>
