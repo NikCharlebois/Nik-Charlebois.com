@@ -161,7 +161,7 @@ Add-PowerAppsAccount -ApplicationId '<your app id>' `
 <h2>Teams</h2>
 <p>Authentication to Microsof Teams is handled by the <a href = "https://www.powershellgallery.com/packages/MicrosoftTeams/">MicrosoftTeams</a> PowerShell module. Just like all the other modules, it supports placing the certificate in the current user's store.</p>
 
-<h3>Via MSCloudLoginAssistant</h3>
+<h3>Via MSCloudLoginAssistant</h3><a name="TeamsMSCloud">⚓</a>
 
 ``` powershell
 Connect-M365Tenant -Workload 'MicrosoftTeams' `
@@ -172,7 +172,7 @@ Connect-M365Tenant -Workload 'MicrosoftTeams' `
 
 <img src="/blog/posts/2024/authenticating-with-powershell/images/teamsmscloud.png" alt="Connecting to Microsoft Teams via MSCloudLoginAssistant." />
 
-<h3>Via MicrosoftTeams</h3>
+<h3>Via MicrosoftTeams</h3><a name="TeamsModule">⚓</a>
 
 ``` powershell
 Connect-MicrosoftTeams -ApplicationId '<your app id>' `
@@ -181,7 +181,8 @@ Connect-MicrosoftTeams -ApplicationId '<your app id>' `
 ```
 <img src="/blog/posts/2024/authenticating-with-powershell/images/teamsmodule.png" alt="Connecting to Microsoft Teams via MicrosoftTeams." />
 
-<h3>Local Configuration Management</h3>
+
+<h3>Local Configuration Management</h3><a name="TeamsLCM">⚓</a>
 <p>LCM requires the certificate to be installed in the Local Machine's store in order to authenticate.</p>
 
 <script src="https://utteranc.es/client.js"
