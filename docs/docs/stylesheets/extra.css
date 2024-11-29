@@ -40,7 +40,9 @@
 h1.blog-title {
     display:inline;
 }
-
+.anchor {
+    float:left;
+}
 .md-tabs {
     display: none;
 }
