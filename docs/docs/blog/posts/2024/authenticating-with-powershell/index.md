@@ -182,7 +182,7 @@ Connect-MicrosoftTeams -ApplicationId '<your app id>' `
 <img src="/blog/posts/2024/authenticating-with-powershell/images/teamsmodule.png" alt="Connecting to Microsoft Teams via MicrosoftTeams." />
 
 
-<h3>Local Configuration Management</h3><a name="TeamsLCM">⚓</a>
+<h3 id="TeamsLCM">Local Configuration Management</h3><a href="#TeamsLCM">⚓</a>
 <p>LCM requires the certificate to be installed in the Local Machine's store in order to authenticate.</p>
 
 <script src="https://utteranc.es/client.js"
