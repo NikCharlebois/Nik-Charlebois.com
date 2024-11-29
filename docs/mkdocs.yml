@@ -40,6 +40,8 @@ markdown_extensions:
   - md_in_html
 extra:
   social:
+    - icon: fontawesome/brands/github
+      link: 'https://www.github.com/NikCharlebois'
     - icon: fontawesome/brands/twitter
       link: 'https://twitter.com/NikCharlebois'
     - icon: fontawesome/brands/youtube
