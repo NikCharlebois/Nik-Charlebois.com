@@ -37,10 +37,6 @@
     font-size: 18px;
 }
 
-.timeline-header em {
-    display: none !important;
-}
-
 h1.blog-title {
     display:inline;
 }
