@@ -10,12 +10,12 @@ title: Authenticating to Microsoft Workloads using PowerShell
 
 <p>For each workload we will provide the instructions to connect via the MSCloudLoginAssistant module, via its native PowerShell module and we will provide additional information about how you can leverage Microsoft365DSC to have the Local Configuration Manager (LCM) service authenticate. It is important to understand that the LCM always runs in the context of the Local System and therefore having the certificate stored in the current user's store is not sufficient in a lot of cases.</p>
 
-<h2>Microsoft Graph (Entra Id and Intune)</h2>
+<h2 id="Graph">Microsoft Graph (Entra Id and Intune)<a href="Graph" class="anchor">⚓</a></h2>
 <p>Both of the Entra Id and Intune workloads in Microsoft365DSC are leveraging the various <a href="https://www.powershellgallery.com/packages/Microsoft.Graph.Authentication/">Microsoft.Graph.*</a> PowerShell modules. In order to authenticate with the Microsoft Graph PowerShell module, you simply need to have the certificate stored in your current user's store.</p>
 
 <img src="/blog/posts/2024/authenticating-with-powershell/images/certlocaluser.png" alt="Certificate in the local user's store." />
 
-<h3>Via MSCloudLoginAssistant</h3>
+<h3 id="GraphMSCloud">Via MSCloudLoginAssistant<a href="GraphMSCloud" class="anchor">⚓</a></h3>
 
 ``` powershell
 Connect-M365Tenant -Workload 'MicrosoftGraph' `
@@ -25,7 +25,7 @@ Connect-M365Tenant -Workload 'MicrosoftGraph' `
 ```
 <img src="/blog/posts/2024/authenticating-with-powershell/images/graphmscloud.png" alt="Connecting to Microsoft Graph via MSCloudLoginAssistant." />
 
-<h3>Via Microsoft.Graph.Authentication</h3>
+<h3 id="GraphModule">Via Microsoft.Graph.Authentication<a href="GraphModule" class="anchor">⚓</a></h3>
 
 ``` powershell
 Connect-MgGraph -ClientId '<your app id>' `
@@ -34,14 +34,14 @@ Connect-MgGraph -ClientId '<your app id>' `
 ```
 <img src="/blog/posts/2024/authenticating-with-powershell/images/graphwithmodule.png" alt="Connecting to Microsoft Graph via Microsoft Graph PowerShell SDK." />
 
-<h3>Local Configuration Management</h3>
+<h3 id="GraphLCM">Local Configuration Management<a href="GraphLCM" class="anchor">⚓</a></h3>
 <p>Because the LCM service runs as the local system, we need to install the certificate in the Local Computer's store as well. If you omit to install the certificate in there as well, the LCM will not be able to authenticate to the Microsoft Graph.</p>
 <img src="/blog/posts/2024/authenticating-with-powershell/images/localmachine.png" alt="Installing the certificate in the Local Machine's store." />
 
-<h2>Exchange Online</h2>
+<h2 id="EXO">Exchange Online<a href="EXO" class="anchor">⚓</a></h2>
 <p>Managing Exchange Online is done via the <a href="https://www.powershellgallery.com/packages/ExchangeOnlineManagement/">ExchangeOnlineManagement</a> module. It is sufficient for you to have the certificate in the current user's store to authenticate. However, in this case, the associated application will also need to be granted the <a href="https://learn.microsoft.com/en-us/powershell/exchange/app-only-auth-powershell-v2?view=exchange-ps#select-and-assign-the-api-permissions-from-the-portal">Manage as App</a> permission, and an Entra Id role sufficient to manage Exchange. Refer to the official Exchange Online documentation for additional details.</p>
 
-<h3>Via MSCloudLoginAssistant</h3>
+<h3 id="EXOMSCloud">Via MSCloudLoginAssistant<a href="EXOMSCloud" class="anchor">⚓</a></h3>
 
 ``` powershell
 Connect-M365Tenant -Workload 'ExchangeOnline' `
@@ -52,7 +52,7 @@ Connect-M365Tenant -Workload 'ExchangeOnline' `
 
 <img src="/blog/posts/2024/authenticating-with-powershell/images/exomscloud.png" alt="Connecting to Exchange Online via MSCloudLoginAssistant." />
 
-<h3>Via ExchangeOnlineManagement</h3>
+<h3 id="EXOModule">Via ExchangeOnlineManagement<a href="#EXOModule" class="anchor">⚓</a></h3>
 
 ``` powershell
 Connect-ExchangeOnline -AppId '<your app id>' `
@@ -61,10 +61,13 @@ Connect-ExchangeOnline -AppId '<your app id>' `
 ```
 <img src="/blog/posts/2024/authenticating-with-powershell/images/exomodule.png" alt="Connecting to Exchange Online via ExchangeOnlineManagement." />
 
-<h2>Security and Compliance (Defender & Purview)</h2>
+<h3 id="EXOLCM">Local Configuration Management<a href="EXOLCM" class="anchor">⚓</a></h3>
+<p>LCM requires the certificate to be installed in the Local Machine's store in order to authenticate.</p>
+
+<h2 id="SC">Security and Compliance (Defender & Purview)<a href="#SC" class="anchor">⚓</a></h2>
 <p>Managing Defender and Purview is also is done via the <a href="https://www.powershellgallery.com/packages/ExchangeOnlineManagement/">ExchangeOnlineManagement</a> module. Again, it is sufficient for you to have the certificate in the current user's store to authenticate. However, in this case, the associated application will also need to be granted the <a href="https://learn.microsoft.com/en-us/powershell/exchange/app-only-auth-powershell-v2?view=exchange-ps#select-and-assign-the-api-permissions-from-the-portal">Manage as App</a> permission, and an Entra Id role sufficient to manage Defender & Purview. Refer to the official Security & Compliance center documentation for additional details.</p>
 
-<h3>Via MSCloudLoginAssistant</h3>
+<h3 id="SCMSCloud">Via MSCloudLoginAssistant<a href="#SCMSCloud" class="anchor">⚓</a></h3>
 
 ``` powershell
 Connect-M365Tenant -Workload 'SecurityComplianceCenter' `
@@ -75,7 +78,7 @@ Connect-M365Tenant -Workload 'SecurityComplianceCenter' `
 
 <img src="/blog/posts/2024/authenticating-with-powershell/images/scmscloud.png" alt="Connecting to Security and Compliance via MSCloudLoginAssistant." />
 
-<h3>Via ExchangeOnlineManagement</h3>
+<h3 id="SCModule">Via ExchangeOnlineManagement<a href="#SCModule" class="anchor">⚓</a></h3>
 
 ``` powershell
 Connect-IPPSSession -AppId '<your app id>' `
@@ -84,13 +87,13 @@ Connect-IPPSSession -AppId '<your app id>' `
 ```
 <img src="/blog/posts/2024/authenticating-with-powershell/images/scmodule.png" alt="Connecting to Security and Compliance Center via ExchangeOnlineManagement." />
 
-<h3>Local Configuration Management</h3>
+<h3 id="SCLCM">Local Configuration Management<a href="#SCLCM" class="anchor">⚓</a></h3>
 <p>LCM requires the certificate to be installed in the Local Machine's store in order to authenticate.</p>
 
-<h2>SharePoint Online</h2>
+<h2 id="PnP">SharePoint Online<a href="#PnP" class="anchor">⚓</a></h2>
 <p>In the case of Microsoft365DSC, the authentication to SharePoint Online is done via the <a href="https://www.powershellgallery.com/packages/PnP.PowerShell/">PnP.PowerShell</a> module. It is sufficient to have the certificate u=in the current user's store to authenticate. You will also need to make sure that the app registration is granted the <strong>Sites.FullControl.All</strong> permission for the <strong>SharePoint API</strong> (not Microsoft Graph!). </p>
 
-<h3>Via MSCloudLoginAssistant</h3>
+<h3 id="PnPMSCloud">Via MSCloudLoginAssistant<a href="#PnPMSCloud" class="anchor">⚓</a></h3>
 
 ``` powershell
 Connect-M365Tenant -Workload 'PnP' `
@@ -101,7 +104,7 @@ Connect-M365Tenant -Workload 'PnP' `
 
 <img src="/blog/posts/2024/authenticating-with-powershell/images/pnpmscloud.png" alt="Connecting to SharePoint Online via MSCloudLoginAssistant." />
 
-<h3>Via PnP.PowerShell</h3>
+<h3 id="PnPModule">Via PnP.PowerShell<a href="#PnPModule" class="anchor">⚓</a></h3>
 
 ``` powershell
 Connect-PnPOnline -ClientId '<your app id>' `
@@ -111,13 +114,13 @@ Connect-PnPOnline -ClientId '<your app id>' `
 ```
 <img src="/blog/posts/2024/authenticating-with-powershell/images/pnpmodule.png" alt="Connecting to SharePoint Online via PnP.PowerShell." />
 
-<h3>Local Configuration Management</h3>
+<h3 id="PnPLCM">Local Configuration Management<a href="#PnPLCM" class="anchor">⚓</a></h3>
 <p>LCM requires the certificate to be installed in the Local Machine's store in order to authenticate.</p>
 
 <h2>Power Platforms</h2>
 <p>Authentication to Power Platforms is handled by the <a href="https://www.powershellgallery.com/packages/Microsoft.PowerApps.Administration.PowerShell/">Microsoft.PowerApps.Administration.PowerShell</a>. This module currently <strong>only supports</strong> placing the certificate in the current user's store. In order to properly authenticate with the module, you will need to make sure you register your service principal as a Power App Management app. For details on how to do this, please refer to the <a href="https://learn.microsoft.com/en-us/power-platform/admin/powershell-create-service-principal#registering-an-admin-management-application">official documentation</a>.</p>
 
-<h3>Via MSCloudLoginAssistant</h3>
+<h3 id="PPMSCloud">Via MSCloudLoginAssistant<a href="#PPMSCloud" class="anchor">⚓</a></h3>
 
 ``` powershell
 Connect-M365Tenant -Workload 'PowerPlatforms' `
@@ -128,7 +131,7 @@ Connect-M365Tenant -Workload 'PowerPlatforms' `
 
 <img src="/blog/posts/2024/authenticating-with-powershell/images/powermscloud.png" alt="Connecting to Power Platforms via MSCloudLoginAssistant." />
 
-<h3>Via Microsoft.PowerApps.Administration.PowerShell</h3>
+<h3 id="PPModule">Via Microsoft.PowerApps.Administration.PowerShell<a href="#PPModule" class="anchor">⚓</a></h3>
 
 ``` powershell
 Add-PowerAppsAccount -ApplicationId '<your app id>' `
@@ -137,7 +140,7 @@ Add-PowerAppsAccount -ApplicationId '<your app id>' `
 ```
 <img src="/blog/posts/2024/authenticating-with-powershell/images/powermodule.png" alt="Connecting to Power Platforms via Microsoft.PowerApps.Administration.PowerShell." />
 
-<h3>Local Configuration Management</h3>
+<h3 id="PPLCM">Local Configuration Management<a href="#PPLCM" class="anchor">⚓</a></h3>
 <p>This is where things get a little more complicated. At the time of writing this article, the Power Platforms PowerShell mdule only supports looking into the current user's store and <strong>not</strong> in the local system's one. Because the LCM always runs as the Local System user, this means that we need to install the certificate in the current user's store of....the Local System user (I know, right). Currently, the best way to achieve this is to use a tool such as <a href="https://learn.microsoft.com/en-us/sysinternals/downloads/psexec">PSExec</a> to let you launch the Management Console as the Local System user and install the certificate in its store.</p>
 
 <ul>
@@ -158,7 +161,7 @@ Add-PowerAppsAccount -ApplicationId '<your app id>' `
 <ol>Click <strong>Next</strong> twice and then on <strong>Finish</strong> to complete the import process.</ol>
 </ul>
 
-<h2>Teams</h2>
+<h2>Teams<a href="#Teams" class="anchor">⚓</a></h2>
 <p>Authentication to Microsof Teams is handled by the <a href = "https://www.powershellgallery.com/packages/MicrosoftTeams/">MicrosoftTeams</a> PowerShell module. Just like all the other modules, it supports placing the certificate in the current user's store.</p>
 
 <h3 id="TeamsMSCloud">Via MSCloudLoginAssistant<a href="#TeamsMSCloud" class="anchor">⚓</a></h3>
@@ -172,7 +175,7 @@ Connect-M365Tenant -Workload 'MicrosoftTeams' `
 
 <img src="/blog/posts/2024/authenticating-with-powershell/images/teamsmscloud.png" alt="Connecting to Microsoft Teams via MSCloudLoginAssistant." />
 
-<h3 id="TeamsModule">Via MicrosoftTeams</h3>
+<h3 id="TeamsModule">Via MicrosoftTeams<a href="#TeamsModule" class="anchor">⚓</a></h3>
 
 ``` powershell
 Connect-MicrosoftTeams -ApplicationId '<your app id>' `
@@ -181,7 +184,7 @@ Connect-MicrosoftTeams -ApplicationId '<your app id>' `
 ```
 <img src="/blog/posts/2024/authenticating-with-powershell/images/teamsmodule.png" alt="Connecting to Microsoft Teams via MicrosoftTeams." />
 
-<h3 id="TeamsLCM">Local Configuration Management</h3>
+<h3 id="TeamsLCM">Local Configuration Management<a href="#TeamsLCM" class="anchor">⚓</a></h3>
 <p>LCM requires the certificate to be installed in the Local Machine's store in order to authenticate.</p>
 
 <script src="https://utteranc.es/client.js"

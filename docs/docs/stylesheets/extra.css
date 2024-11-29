@@ -41,7 +41,9 @@ h1.blog-title {
     display:inline;
 }
 .anchor {
-    float:left;
+    font-size:small;
+    position: relative;
+    bottom:1ex;
 }
 .md-tabs {
     display: none;
