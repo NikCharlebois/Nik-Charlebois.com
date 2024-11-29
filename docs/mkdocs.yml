@@ -44,7 +44,7 @@ extra:
       link: 'https://twitter.com/NikCharlebois'
     - icon: fontawesome/brands/youtube
       link: 'https://www.youtube.com/channel/UCveScabVT6pxzqYgGRu17iw'
-    - icon: fontawesome/solid/link
+    - icon: fontawesome/solid/linkedin
       link: 'https://www.linkedin.com/in/nikcharlebois/'
   generator: false
   analytics:
