@@ -5,7 +5,7 @@ title: Performance Considerations for Microsoft365DSC
 <h1 class="blog-title">Performance Considerations for Microsoft365DSC</h1>
 <div class="article-date">2024-11-29</div>
 
-<p>In this article we will cover various things you should consider when trying to improve the performance of Snapshots and Monitoring/Deployment when using <a href="https://Microsoft365DSc.com">Microsoft365DSC</a>. This is a topic to is of concern for almost every customer I get to talk to, and there are various things that users can do to improve the overall time it takes to perform the various operations using the solution.</p>
+<p>In this article we will cover various things you should consider when trying to improve the performance of Snapshots and Monitoring/Deployment when using <a href="https://Microsoft365DSc.com">Microsoft365DSC</a>. This is a topic of concern for almost every customer I get to talk to, and there are various things that users can do to improve the overall performance of their solutions.</p>
 
 <h2 id="noteverything">Only Export What You Need<a href="#noteverything" class="anchor">⚓</a></h2>
 <p>By default, doing an export of a tenant's configuration using the <em>Export-M365DSCConfiguration</em> cmdlet will include over 405 resource types as part of the capture. Most customer I talk to don't need to capture it all. Our recommendation is to make sure you only capture the components you need and are interested in exporting. The <em>Export-M365DSCConfiguration</em> cmdlet offers various ways to specify subsets of the resources you want to export:</p>
