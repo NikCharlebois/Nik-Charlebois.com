@@ -47,6 +47,13 @@ $Global:M365DSCSkipDependenciesValidation = $true
 <h2 id="parallel">Parallelize Jobs as Much as Possible<a href="#parallel" class="anchor">⚓</a></h2>
 <p>While this one might sound trivial, it is recommend to divider and conquer where possible. Microsoft365DSC is sequential in nature, therefore it is better to split the deployment, monitoring and snapshot jobs into several smaller parallel jobs. For example, instead of having a single process export all of the resource instance of your tenant, your should opt to split the process into smaller jobs such as having one process for each workload running in parallel. It is important to note that while this will help speed up the overall completion time, that you are still subject to the API throttling behind the scene; Microsoft365DSC doesn't escape from these restrictions.</p>
 
+<h2 id="telemetry">Disable Telemetry<a href="#telemetry" class="anchor">⚓</a></h2>
+<p>By default, Microsoft365DSC captures telemetry information to better understand how customers are using its various features and find areas of improvements for the overall solution. Customers can also choose to send this telemetry back to their own Application Insights environments for reporting purposes. For additional details on how to setup the telemetry for your agents, you can refer to the following <a href="https://microsoft365dsc.com/user-guide/get-started/telemetry/">article</a>. This telemetry capture can, in some instances, add extra overhead on the solution and disabling it can help improve the overall speed of your operations.</p>
+
+``` powershell
+Set-M365DSCTelemetryOption -Enabled $false
+```
+
 <script src="https://utteranc.es/client.js"
         repo="NikCharlebois/Nik-Charlebois.com"
         issue-term="pathname"
