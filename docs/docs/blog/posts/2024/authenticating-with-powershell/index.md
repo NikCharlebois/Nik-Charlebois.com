@@ -141,7 +141,7 @@ Add-PowerAppsAccount -ApplicationId '<your app id>' `
 <img src="/blog/posts/2024/authenticating-with-powershell/images/powermodule.png" alt="Connecting to Power Platforms via Microsoft.PowerApps.Administration.PowerShell." />
 
 <h3 id="PPLCM">Local Configuration Management<a href="#PPLCM" class="anchor">⚓</a></h3>
-<p>This is where things get a little more complicated. At the time of writing this article, the Power Platforms PowerShell mdule only supports looking into the current user's store and <strong>not</strong> in the local system's one. Because the LCM always runs as the Local System user, this means that we need to install the certificate in the current user's store of....the Local System user (I know, right). Currently, the best way to achieve this is to use a tool such as <a href="https://learn.microsoft.com/en-us/sysinternals/downloads/psexec">PSExec</a> to let you launch the Management Console as the Local System user and install the certificate in its store.</p>
+<p>This is where things get a little more complicated. At the time of writing this article, the Power Platforms PowerShell module only supports looking into the current user's store and <strong>not</strong> in the local system's one. Because the LCM always runs as the Local System user, this means that we need to install the certificate in the current user's store of the Local System user. Currently, the best way to achieve this is to use a tool such as <a href="https://learn.microsoft.com/en-us/sysinternals/downloads/psexec">PSExec</a> to let you launch the Management Console as the Local System user and install the certificate in its store.</p>
 
 <ul>
 <ol>Download and install the PSTools under <strong>C:\tools</strong></ol>
