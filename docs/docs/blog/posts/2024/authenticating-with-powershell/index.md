@@ -161,7 +161,7 @@ Add-PowerAppsAccount -ApplicationId '<your app id>' `
 <h2>Teams</h2>
 <p>Authentication to Microsof Teams is handled by the <a href = "https://www.powershellgallery.com/packages/MicrosoftTeams/">MicrosoftTeams</a> PowerShell module. Just like all the other modules, it supports placing the certificate in the current user's store.</p>
 
-<h3 id="TeamsMSCloud">Via MSCloudLoginAssistant<a name="TeamsMSCloud" class="anchor">⚓</a></h3>
+<h3 id="TeamsMSCloud">Via MSCloudLoginAssistant<a href="#TeamsMSCloud" class="anchor">⚓</a></h3>
 
 ``` powershell
 Connect-M365Tenant -Workload 'MicrosoftTeams' `
