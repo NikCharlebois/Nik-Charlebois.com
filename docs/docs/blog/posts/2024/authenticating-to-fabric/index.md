@@ -13,6 +13,8 @@ title: Authenticating to Fabric via Microsoft365DSC
 <h2 id="grantPermissions">Step 2 - Grant Entra ID Roles to your Service Principal<a href="#grantPermissions" class="anchor">⚓</a></h2>
 <p>In order to be allowed to authenticate to the Fabric API, your service principal will need to be granted an appropriate Entra ID role. We recommend granting it the <strong>Fabric Administrator</strong> role, but it will also work with the <strong>Global Reader</strong> role.</p>
 
+<img src="/blog/posts/2024/authenticating-to-fabric/images/permissionsforspnfabric.png" alt="Assigning permissions to your service principal" />
+
 <h2 id="allowSPN">Step 3 - Allow Service Principals to Access Read-Only APIs<a href="#allowSPN" class="anchor">⚓</a></h2>
 <p>Navigate to the Fabric admin portal Tenant settings page(<a href="https://app.fabric.microsoft.com/admin-portal/tenantSettings">https://app.fabric.microsoft.com/admin-portal/tenantSettings</a>). Once on the page, scroll down to the <strong>Admin API settings</strong> section, and expand the <strong>Service principals can access read-only admin APIs</strong> option. Make sure the toggle is set to <strong>Enabled</strong> and in the "Specific security groups" box, enter the name of your security group, in my case "Fabric API Access". Click <strong>Apply</strong></p>
 
