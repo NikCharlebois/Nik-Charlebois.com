@@ -1,4 +1,11 @@
 <div class="article-listing">
+    <img src="/blog/posts/2024/authenticating-to-fabric/authenticating-to-fabric.webp" alt ="Authenticating to Fabric via Microsoft365DSC" />
+    <h2><a href="/blog/posts/2024/authenticating-to-fabric/index.html">Authenticating to Fabric via Microsoft365DSC</a></h2>
+    <div class="article-date">November 29th, 2024</div>
+    <p>Discusses how to configure your tenant to enable the use of Microsoft365DSC for the Fabric settings. The article describes a step-by-step approach to getting the authentication working agains the Fabric read-only APIs.</p>
+</div>
+
+<div class="article-listing">
     <img src="/blog/posts/2024/m365dsc-performance-considerations/m365dsc-performance-considerations.webp" alt ="Performance Considerations for Microsoft365DSC" />
     <h2><a href="/blog/posts/2024/m365dsc-performance-considerations/index.html">Performance Considerations for Microsoft365DSC</a></h2>
     <div class="article-date">November 29th, 2024</div>
