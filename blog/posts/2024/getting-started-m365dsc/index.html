@@ -1,0 +1,648 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://nikcharlebois.github.io/Nik-Charlebois.com/blog/posts/2024/getting-started-m365dsc/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../Images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Getting Started with Microsoft365DSC - Nik Charlebois - Crawl, Walk, Run, Automate</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-G3L4JDZK7N"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-G3L4JDZK7N",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-G3L4JDZK7N",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Nik Charlebois - Crawl, Walk, Run, Automate" class="md-header__button md-logo" aria-label="Nik Charlebois - Crawl, Walk, Run, Automate" data-md-component="logo">
+      
+  <img src="/Images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nik Charlebois - Crawl, Walk, Run, Automate
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started with Microsoft365DSC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  About Me
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+  <nav id="sidebar" class="sidebar">
+    <div class="p-4">
+        
+        <img class="logo" src="/Images/NikProfile.png" height="150px">
+    <div class="left-text-center">
+        
+            <span class="left-text left-line-height left-text-white">Nik Charlebois' Blog</span>
+        
+    </div>
+
+    <div class="left-box flex-column">
+        <ul class="dot-ul">
+            <li><div class="dot-li left-bg-cyan"></div></li>
+            <li><div class="dot-li left-bg-green"></div></li>
+            <li><div class="dot-li left-bg-orange"></div></li>
+            <li><div class="dot-li left-bg-pink"></div></li>
+            <li><div class="dot-li left-bg-purple"></div></li>
+            <li><div class="dot-li left-bg-red"></div></li>
+            <li><div class="dot-li left-bg-yellow"></div></li>
+        </ul>
+    </div>
+
+    <hr class="left-divider">
+
+    <!-- block menu -->
+    <ul class="mb-5 left-list left-list-none">
+        
+        <li class="left-box">
+            <a href="/index.html" class=" active 
+                left-anchor d-inline-flex align-items-center border-0 left-text-purple--hover">
+                Home
+            </a>
+        </li>
+        <li class="left-box">
+            <a href="/about/index.html" class="
+                left-anchor d-inline-flex align-items-center border-0 left-text-purple--hover">
+                About Me
+            </a>
+        </li>
+    </ul>
+    <!-- endblock -->
+</div>
+  </nav>
+  
+<nav class="divider left-bg-purple-cyan"></nav>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(window).scroll(function() {
+    if (window.screen.width > 600)
+    {
+        if ($(this).scrollTop() > 200) { //use `this`, not `document`
+            $('.sidebar').css({
+                'display': 'none'
+            });
+        }
+        else if ($(this).scrollTop() <= 200) { //use `this`, not `document`
+            $('.sidebar').css({
+                'display': 'block'
+            });
+        }
+    }
+});
+</script>
+
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 class="blog-title">Getting Started with Microsoft365DSC</h1>
+<div class="article-date">2024-11-27</div>
+<p>In this article, we will guide you through all the steps involved in getting up and running with <a href="https://Microsoft365DSC.com">Microsoft365DSC</a>. For the purpose of this article, I created a brand new Windows Server 2025 virtual machine and this is the environment I will be using throughout this blog post. Please note that we will also be using Windows PowerShell 5.1 for all steps described below. It is important to note that at the time of writing this article, the latest Microsoft365DSC version was <strong>1.24.1127.1</strong>. Also, while it is possible for you to export the configuration of an existing tenant using administrator credentials, for the purpose of this article, we will use the recommended authentication approach which is to use a Service Principal to authenticate with a certificate to secure the connection.</p>
+
+<h2 id="step1">Step 1 - Install the Core Microsoft365DSC Module<a href="#step1" class="anchor">⚓</a></h2>
+
+<p>Open a new Windows PowerShell (version 5.1) windows as an administrator.</p>
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/runpowershellasadmin.png" alt="Run PowerShell as Admin" /></p>
+<p>Run the following line of PowerShell code. This will pull the Microsoft365DSC module from the <a href="https://PowerShellGallery.com">PowerShell Gallery</a> and install it on the machine under the path <em>c:\Program Files\WindowsPowerShell\Modules\Microsoft365DSC\<version></em></p>
+
+<div class="codehilite"><pre><span></span><code><span class="nb">Install-Module</span> <span class="n">Microsoft365DSC</span> <span class="n">-Force</span>
+</code></pre></div>
+
+<p>If prompted to install the latest version of the nuget provider, type in <strong>Y</strong>.</p>
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/installnuget.png" alt="Install the latest version of the nuget provider." /></p>
+<h2 id="step2">Step 2- Update Dependencies<a href="#step2" class="anchor">⚓</a></h2>
+<p>Microsoft365DSC depends on about a dozen different other modules (e.g., the Exchange Online Management Shell, the Teams PowerShell Moduel, the Graph PowerShell SDK, etc.). The previous step <strong>only</strong> installed the core Microsoft365DSC PowerShell module, but di not install any of its dependencies, which are required for the module to run properly. The next step of the installation consists of downloading and installing all of these dependencies. If you are curious to understand what all these dependencies are, you can refer to the <a href="https://github.com/microsoft/Microsoft365DSC/blob/Dev/Modules/Microsoft365DSC/Dependencies/Manifest.psd1">Microsoft365DSC Dependency Manifest</a> file. In order to download and install all these dependencies, simply run the following PowerShell cmdlet.</p>
+
+<div class="codehilite"><pre><span></span><code><span class="nb">Update-M365DSCModule</span>
+</code></pre></div>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/installingdependencies.png" alt="Install all the Microsoft365DSC dependencies." /></p>
+<p><strong>Note:</strong> Running this command will automatically download all the dependencies from the PowerShell Gallery and install them under <em>C:\Program Files\WindowsPowerShell\Modules\</em>.</p>
+
+<h2 id="step3">Step 3 - Configure the Agent & Generate the Certificate<a href="#step3" class="anchor">⚓</a></h2>
+<p>The next thing we need to do is generate a certificate which will serve a dual purpose. On one hand, it will secure our authentication process with our service principal, and on the other hand it will encrypt our compiled DSC configuration file to ensure we don't expose any plaintext passwords or secrets. As part of the Microsoft365DSc module, we provide a single cmdlets which allows you to generate the certificate and automatically configure the Local Configuration Manager (LCM) service so that it can use it to decrypt our configuration files. To initiate the process, run the following PowerShell command:</p>
+
+<div class="codehilite"><pre><span></span><code><span class="nb">Set-M365DSCAgentCertificateConfiguration</span> <span class="n">-KeepCertificate</span> <span class="n">-GeneratePFX</span> <span class="n">-Password</span> <span class="s1">&#39;&lt;choose a password&gt;&#39;</span>
+</code></pre></div>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/configureagent.png" alt="Configure the LCM and generate new certificates." /></p>
+<p>As stated by the output, this will go and generate both a public .cer and a private .pfx certificate file under the listed path. I strongly recommend you copy those somewhere safe since files in the temps folder will eventually get purged. In my case, I will be copying these under <strong>C:\DSC</strong>.</p>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/certfiles.png" alt="Certificate files generated by Microsoft365DSC." /></p>
+<p>As stated previously, on top of generating the certificate files, the cmdlet also configured your LCM service to use the generated certificate to decrypt configurations. To confirm that the LCM service is properly configured to use the new certificate, you can run the following PowerShell cmdlet and ensure that the <strong>CertificateID</strong> property reflects the thumbprint of the new certificate.</p>
+
+<div class="codehilite"><pre><span></span><code><span class="nb">Get-DSCLocalConfigurationManager</span>
+</code></pre></div>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/lcmcertificate.png" alt="LCM's certificate configuration." /></p>
+<h2 id="step4">Step 4 - Install the Certificate on the Machine<a href="#step4" class="anchor">⚓</a></h2>
+<p>Once you've confirmed that the LCM is properly configured, the next step is to install the certificate's private key on the machine where you will be running Microsoft365DSC from. To install the certificate in this location, simply double click on the .pfx file and select the Current User as the store location.</p>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/currentuserstorecertificate.png" alt="Installing the certificate's private key in the current user store." /></p>
+<p>Click the <strong>Next</strong> button twice, and when prompted to provide the password, type in the password you chosse at step 3 above, when you generated the certificate and its private key. Once the password is entered, leave all the other settings as default and click Next again.</p>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/certpassword.png" alt="Providing the private key's password." /></p>
+<p>Click Next on the following screen, leaving the default value to "Automatically select the certificate store based on the type of certificate". Then click <strong>Finish</strong> on the last screen.</p>
+
+<p><strong>Note:</strong>When running DSC via the LCM (e.g., with Start-DSCConfiguration or Test-DSCConfiguration) you will also need to put the certificate in the Local Computer store.</p>
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/certlocalmachine.png" alt="Install the certificate in the local machine's store." /></p>
+<h2 id="step5">Step 5 - Create a Service Principal<a href="#step5" class="anchor">⚓</a></h2>
+<p>As mentionned at the beginning of this article, we will be authenticating to our tenants using a service principal (SPN). In order to create such an SPN, start by navigating to: <a href="https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps">Azure App Registration Portal</a> for your tenant. In the to bar, click on <strong>New registration</strong>.</p>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/newappregistration.png" alt="New Azure app registration." /></p>
+<p>Provide a name for your new app, leave all the default settings selected and click on <strong>Register</strong> at the bottom.</p>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/myappcreation.png" alt="Creating a new app named MyApp." /></p>
+<p>On the next screen, take note of the <strong>Application (client) ID</strong> value for your newly created app. This value is refered to as the <strong>ApplicationId</strong> property in the context of Microsoft365DSC. In the left navigation, click on the <strong>Certificates & secrets</strong> link. From there, click on the <strong>Certificates (0)</strong> header, and then on the <strong>Upload certificate</strong> button. When prompted, select the public certificate <strong>.cer</strong> file that was generated at Step 3 above and upload it.</p>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/certuploaded.png" alt="Certificate uploaded." /></p>
+<p>Once the certificate has been successfully uploaded, make sure to copy the <strong>Thumbprint</strong> value (not the Certificate ID). You will need to keep this value handy as this is refered to as the <strong>CertificateThumbprint</strong> property in the context of Microsoft365DSC. The last piece of information you need to be able to authenticate t your tenant via your Service Principal, is the Tenant Id. Now, don't let the name of this property fool you, what we actually need is the domain name of the tenant in the form of <em>*.onmicrosoft.com</em> and not the actual tenant's GUID. To find this informatiom, you can navigate to the <a href="https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview">root of you Entra ID portal</a>, and take a not of the <strong>Primary domain</strong> value.</p>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/primarydomain.png" alt="Primary domain of the tenant's Entra Id." /></p>
+<p>In the context of Microsoft365DSC, this value is known as the <strong>TenantId</strong> property.</p>
+
+<h2 id="step6">Step 6 - Grant Permission to the Service Principal<a href="#step6" class="anchor">⚓</a></h2>
+<p>By default, our service principal only has access to read the current user's profile. In order for us to be able to either take a snapshot, monitor or make changes to a configuration setting via DSC, we need to grant it the appropriate API permissions. For the purpose of this article, we will focus on the <strong>Entra ID Conditional Access Policies</strong>. To learn more about the required permissions for all other DSc resources, please refer to the official website at <a href="https://Microsoft365DSC.com">https://Microsoft365DSC.com</a>. We can determine what the required permissions for any given DSC resource are by looking at its associated <em>settings.json</em> file. For example, in the case of the AADConditionalAccessPolicy resource, which is the resource associated with Entra ID Conditional Access Policies, the setting file can be found at <a href="https://github.com/microsoft/Microsoft365DSC/blob/Dev/Modules/Microsoft365DSC/DSCResources/MSFT_AADConditionalAccessPolicy/settings.json">https://github.com/microsoft/Microsoft365DSC/blob/Dev/Modules/Microsoft365DSC/DSCResources/MSFT_AADConditionalAccessPolicy/settings.json</a>.</p>
+
+<p>In the case of DSC, we are only interested in the application permissions and can disregard the delegated permissions since the solution only deals with app-only permissions in the context of a Service Principal. By looking at the file, we see that we are listing both the permissions for the <strong>read</strong> and <strong>update</strong> scenarios.</p>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/resourcespermissions.png" alt="App-only permissions for the conditional access policy DSC resource." /></p>
+<p>The read scenario represents the case where all you are trying to achieve with your Service Principal is either to export (take a snapshot) of instance of the resource, in occurence a snapshot of all conditional access policies in the tenant, or where you are trying to monitor them for configuration drifts. The update scenario on the other hand is for when you are trying to set the configuration settings, either via an initial deployment of a config, via approved configuration changes or when automatically trying to remediate to detected configuration drifts. It is important to note that the <strong>update</strong> permissions are a superset of the read permissions and that be granting those to you Service Principal, you are also explicitely allowing it to read the settings. In our case, we will go ahead and grant our app registration all the required permissions for the <strong>update</strong> scenario. <strong>Note:</strong>: In addition to these permissions, each Service Principal trying to authenticate via Microsoft365DSC will need to <em>Directory.Read.All</em> permissions in order to ensure the provided tenant Id is the primary domain.</p>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/apppermissions.png" alt="Application registration permissions assigned." /></p>
+<p>By default, all assigned API permissions are not granted consent at the organization level and therefore cannot be used by your service principal. You will need to grant consent to these permissions on behalf of your organization by clicking on the <strong>Grant admin consent for Contoso</strong> button and accepting the prompt.</p>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/grantconsent.png" alt="Grant app registration consent to API permissions." /></p>
+<p>Once the consent has been successfully granted, you should see the warning icons updated to reflect green checkmarks instead.</p>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/greencheckmarks.png" alt="Permission grant consent successful." /></p>
+<h2 id="step7">Step 7 - Take a Snapshot<a href="#step7" class="anchor">⚓</a></h2>
+<p>We are finally ready to start and take a snapshot of our tenant. Make sure you open a new PowerShell consol running as admin and type in the following command, making sure to replace the ApplicationId, TenantId and CertificateThumbprint parameters by the values you noted in Step 5 above.</p>
+
+<div class="codehilite"><pre><span></span><code><span class="nb">Export-M365DSCConfiguration</span> <span class="n">-ApplicationId</span> <span class="s1">&#39;&lt;ApplicationId&gt;&#39;</span> <span class="n">-TenantId</span> <span class="s1">&#39;&lt;TenantId&gt;&#39;</span> <span class="n">-CertificateThumbprint</span> <span class="s1">&#39;&lt;CertificateThumbprint&gt;&#39;</span> <span class="n">-Components</span> <span class="p">@(</span><span class="s1">&#39;AADConditionalAccessPolicy&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Once the execution completes, make sure you provide a path to store the resulting files. If the provided path doesn't exist, Microsoft365DSC will create it by default and store the exported files at this location.</p>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/exportedcontent.png" alt="Microsoft365DSC configuration snapshot." /></p>
+<p>The export process will generate 3 files. The <strong>.ps1</strong> file is known as the configuration file contains the exported configuration content (info about the conditional access policies on your tenant). The <strong>.psd1</strong> file is known as the Configuration Data file and contains specific information about the tenant where the configuration was exported from (e.g., the application id used, the tenant id and the certificat thumbprint). The 3rd file is a copy of the public certificazte (.cer) file that is associated with your Local Configuration Manager service.</p>
+
+<h2 id="step8">Step 8 - Deploy Configuration Changes<a href="#step8" class="anchor">⚓</a></h2>
+<p>The next thing we will do is deploy a new Conditional Access Policy using DSC. To do so, I will go ahead and modify the <strong>M365TenantConfig.ps1</strong> file I extracted at Step 7 above and replace its entire content by the following lines:</p>
+
+<div class="codehilite"><pre><span></span><code><span class="k">param</span> <span class="p">(</span>
+<span class="p">)</span>
+
+<span class="n">Configuration</span> <span class="n">M365TenantConfig</span>
+<span class="p">{</span>
+    <span class="k">param</span> <span class="p">(</span>
+    <span class="p">)</span>
+
+    <span class="nv">$OrganizationName</span> <span class="p">=</span> <span class="nv">$ConfigurationData</span><span class="p">.</span><span class="n">NonNodeData</span><span class="p">.</span><span class="n">OrganizationName</span>
+
+    <span class="nb">Import-DscResource</span> <span class="n">-ModuleName</span> <span class="s1">&#39;Microsoft365DSC&#39;</span> <span class="n">-ModuleVersion</span> <span class="s1">&#39;1.24.1127.1&#39;</span>
+
+    <span class="n">Node</span> <span class="n">localhost</span>
+    <span class="p">{</span>
+        <span class="n">AADConditionalAccessPolicy</span> <span class="s2">&quot;AADConditionalAccessPolicy-BlogPost&quot;</span>
+        <span class="p">{</span>
+            <span class="n">ApplicationEnforcedRestrictionsIsEnabled</span> <span class="p">=</span> <span class="nv">$False</span><span class="p">;</span>
+            <span class="n">ApplicationId</span>                            <span class="p">=</span> <span class="nv">$ConfigurationData</span><span class="p">.</span><span class="n">NonNodeData</span><span class="p">.</span><span class="n">ApplicationId</span><span class="p">;</span>
+            <span class="n">AuthenticationContexts</span>                   <span class="p">=</span> <span class="p">@();</span>
+            <span class="n">BuiltInControls</span>                          <span class="p">=</span> <span class="p">@(</span><span class="s2">&quot;mfa&quot;</span><span class="p">);</span>
+            <span class="n">CertificateThumbprint</span>                    <span class="p">=</span> <span class="nv">$ConfigurationData</span><span class="p">.</span><span class="n">NonNodeData</span><span class="p">.</span><span class="n">CertificateThumbprint</span><span class="p">;</span>
+            <span class="n">ClientAppTypes</span>                           <span class="p">=</span> <span class="p">@(</span><span class="s2">&quot;all&quot;</span><span class="p">);</span>
+            <span class="n">CloudAppSecurityIsEnabled</span>                <span class="p">=</span> <span class="nv">$False</span><span class="p">;</span>
+            <span class="n">CloudAppSecurityType</span>                     <span class="p">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+            <span class="n">CustomAuthenticationFactors</span>              <span class="p">=</span> <span class="p">@();</span>
+            <span class="n">DeviceFilterRule</span>                         <span class="p">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+            <span class="n">DisplayName</span>                              <span class="p">=</span> <span class="s2">&quot;Blog Demo CAP&quot;</span><span class="p">;</span>
+            <span class="n">Ensure</span>                                   <span class="p">=</span> <span class="s2">&quot;Present&quot;</span><span class="p">;</span>
+            <span class="n">ExcludeApplications</span>                      <span class="p">=</span> <span class="p">@();</span>
+            <span class="n">ExcludeExternalTenantsMembers</span>            <span class="p">=</span> <span class="p">@();</span>
+            <span class="n">ExcludeExternalTenantsMembershipKind</span>     <span class="p">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+            <span class="n">ExcludeGroups</span>                            <span class="p">=</span> <span class="p">@();</span>
+            <span class="n">ExcludeLocations</span>                         <span class="p">=</span> <span class="p">@();</span>
+            <span class="n">ExcludePlatforms</span>                         <span class="p">=</span> <span class="p">@();</span>
+            <span class="n">ExcludeRoles</span>                             <span class="p">=</span> <span class="p">@(</span><span class="s2">&quot;Directory Synchronization Accounts&quot;</span><span class="p">);</span>
+            <span class="n">ExcludeUsers</span>                             <span class="p">=</span> <span class="p">@(</span><span class="s2">&quot;admin@</span><span class="p">$(</span><span class="nv">$OrganizationName</span><span class="p">)</span><span class="s2">&quot;</span><span class="p">);</span>
+            <span class="n">GrantControlOperator</span>                     <span class="p">=</span> <span class="s2">&quot;OR&quot;</span><span class="p">;</span>
+            <span class="n">IncludeApplications</span>                      <span class="p">=</span> <span class="p">@(</span><span class="s2">&quot;All&quot;</span><span class="p">);</span>
+            <span class="n">IncludeExternalTenantsMembers</span>            <span class="p">=</span> <span class="p">@();</span>
+            <span class="n">IncludeExternalTenantsMembershipKind</span>     <span class="p">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+            <span class="n">IncludeGroups</span>                            <span class="p">=</span> <span class="p">@();</span>
+            <span class="n">IncludeLocations</span>                         <span class="p">=</span> <span class="p">@();</span>
+            <span class="n">IncludePlatforms</span>                         <span class="p">=</span> <span class="p">@();</span>
+            <span class="n">IncludeRoles</span>                             <span class="p">=</span> <span class="p">@();</span>
+            <span class="n">IncludeUserActions</span>                       <span class="p">=</span> <span class="p">@();</span>
+            <span class="n">IncludeUsers</span>                             <span class="p">=</span> <span class="p">@(</span><span class="s2">&quot;All&quot;</span><span class="p">);</span>
+            <span class="n">PersistentBrowserIsEnabled</span>               <span class="p">=</span> <span class="nv">$False</span><span class="p">;</span>
+            <span class="n">PersistentBrowserMode</span>                    <span class="p">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+            <span class="n">SignInFrequencyIsEnabled</span>                 <span class="p">=</span> <span class="nv">$False</span><span class="p">;</span>
+            <span class="n">SignInFrequencyType</span>                      <span class="p">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+            <span class="n">SignInRiskLevels</span>                         <span class="p">=</span> <span class="p">@();</span>
+            <span class="n">State</span>                                    <span class="p">=</span> <span class="s2">&quot;enabledForReportingButNotEnforced&quot;</span><span class="p">;</span>
+            <span class="n">TenantId</span>                                 <span class="p">=</span> <span class="nv">$OrganizationName</span><span class="p">;</span>
+            <span class="n">TransferMethods</span>                          <span class="p">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+            <span class="n">UserRiskLevels</span>                           <span class="p">=</span> <span class="p">@();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">M365TenantConfig</span> <span class="n">-ConfigurationData</span> <span class="p">.\</span><span class="n">ConfigurationData</span><span class="p">.</span><span class="n">psd1</span>
+</code></pre></div>
+
+<p>Using your PowerShell console, browse to the location where the .ps1 file is and execute it as if it was any other PowerShell script out there. This is what we call <strong>compiling a DSC configuration file</strong>. If successful, you should see an output similar to the screen below, which states that the file was successfully compiled into a <strong.MOF</strong> file.</p>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/compile.png" alt="Compiling a Microsoft365DSC configuration file." /></p>
+<p>All that is left is for us to start the configuration deployment by running the following PowerShell command:</p>
+
+<div class="codehilite"><pre><span></span><code><span class="nb">Start-DSCConfiguration</span> <span class="n">M365TenantConfig</span> <span class="n">-Wait</span> <span class="n">-Verbose</span> <span class="n">-Force</span>
+</code></pre></div>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/deploy.png" alt="Deploying a Microsoft365DSC configuration file." /></p>
+<p>Once the execution successfully completes (no error thrown), you may want to navigate to the Azure portal to confirm that the policy was created as expected.</p>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/testingdeployment.png" alt="Confirming the deployment via the Azure portal." /></p>
+<h2 id="step9">Step 9 - Monitoring for Configuration Drifts<a href="#step9" class="anchor">⚓</a></h2>
+<p>By default, once you've deployed a configuration file as shown in Step 8 above, the monitoring service is started by default and all drifts will be reported in the Event Viewer. In our case, we will go via the Azure portal, and force a configuration drift. In my case, I will go and disaable the policy (instead of having it in Report Only mode).</p>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/causedadrift.png" alt="Changing the policy enablement." /></p>
+<p>The monitoring service, by default, runs every 15 minutes. Because we do not want to wait for this to get automatically triggered, we will run the followin gPowerShell command to manually trigger it:</p>
+
+<div class="codehilite"><pre><span></span><code><span class="nb">Test-DSCConfiguration</span> <span class="n">-Detailed</span>
+</code></pre></div>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/testdsc.png" alt="Testing DSC configuration manually." /></p>
+<p>This will analyze the current state of our tenant against what has been defined in our desired configuration file in Step 8 above and will return the list of resources that are both in the desired state and <strong>not</strong> in the desired state. In our case, we only have 1 resource defined and we know it is not in the desired state because we just manually forced a drift. Note that to speed up the analysis process, you can omit the <em>-Detailed</em> switch which will cause the command to simply return true or false. To get additional details about the drift, we can open <strong>Event Viewer</strong> and look at <strong>Applications and Services Logs > M365DSC</strong>. There should be an entry in there that provides granular details about what our drift is.</p>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/driftinfo.png" alt="Information about the detected drift." /></p>
+<h2 id="step10">Step 10 - Automatically Remediate to Configuration Drifts<a href="#step10" class="anchor">⚓</a></h2>
+<p>The last topic we will cover as part of this blog post, is the auto-remediation feature of PowerShell Desired State Configuration. By default, our LCM service is set in <strong>ApplyAndMonitor</strong> mode.</p>
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/applyandmonitor.png" alt="LCM's configuration mode." /></p>
+<p>This means that when drifts are detected, the service will only report them in the Event Viewer and won't attempt to automatically remediate to them. To change this setting and set the LCM into <strong>ApplyAndAutocorrect</strong> mode, we need to eat our own dog food and use DSC to appy the configuration. This can be achieved by creating, compiling and applying a special configuration file known as a Meta MOF. To do so, simply execute the following lines of code:</p>
+
+<div class="codehilite"><pre><span></span><code><span class="p">[</span><span class="n">DSCLocalConfigurationManager</span><span class="p">()]</span>
+<span class="n">Configuration</span> <span class="n">M365AgentConfig</span>
+<span class="p">{</span>
+    <span class="n">Node</span> <span class="n">Localhost</span>
+    <span class="p">{</span>
+        <span class="n">Settings</span>
+        <span class="p">{</span>
+            <span class="n">COnfigurationMode</span> <span class="p">=</span> <span class="s1">&#39;ApplyAndAutocorrect&#39;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">M365AgentConfig</span> <span class="p">|</span> <span class="nb">Out-Null</span>
+<span class="nb">Set-DSCLocalConfigurationManager</span> <span class="n">M365AgentConfig</span> <span class="n">-Force</span>
+</code></pre></div>
+
+<p>To confirm that the change was successful, check the status of the LCM:</p>
+
+<div class="codehilite"><pre><span></span><code><span class="nb">Get-DSCLocalConfigurationManager</span>
+</code></pre></div>
+
+<p><img src="/blog/posts/2024/getting-started-m365dsc/images/applyautocorrect.png" alt="Set the LCM in ApplyAndAutocorrect mode." /></p>
+<p>Once this is properly set, the LCM service will automatically fix any detected drift by re-applying the good known configuration for the instance the next time is executes, which in my case is every 15 minutes (ConfigurationModeFrequencyMins).</p>
+
+<script src="https://utteranc.es/client.js"
+        repo="NikCharlebois/Nik-Charlebois.com"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Nik Charlebois
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.github.com/NikCharlebois" target="_blank" rel="noopener" title="www.github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/NikCharlebois" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/channel/UCveScabVT6pxzqYgGRu17iw" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305m-317.51 213.508V175.185l142.739 81.205z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/nikcharlebois/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.instant", "search.share"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

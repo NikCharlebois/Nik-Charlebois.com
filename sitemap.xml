@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://nikcharlebois.github.io/Nik-Charlebois.com/</loc>
+         <lastmod>2025-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://nikcharlebois.github.io/Nik-Charlebois.com/about/</loc>
+         <lastmod>2025-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://nikcharlebois.github.io/Nik-Charlebois.com/blog/posts/2024/authenticating-to-fabric/</loc>
+         <lastmod>2025-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://nikcharlebois.github.io/Nik-Charlebois.com/blog/posts/2024/authenticating-with-powershell/</loc>
+         <lastmod>2025-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://nikcharlebois.github.io/Nik-Charlebois.com/blog/posts/2024/dsc-error-flow/</loc>
+         <lastmod>2025-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://nikcharlebois.github.io/Nik-Charlebois.com/blog/posts/2024/getting-started-m365dsc/</loc>
+         <lastmod>2025-01-17</lastmod>
+    </url>
+    <url>
+         <loc>https://nikcharlebois.github.io/Nik-Charlebois.com/blog/posts/2024/m365dsc-performance-considerations/</loc>
+         <lastmod>2025-01-17</lastmod>
+    </url>
+</urlset>
