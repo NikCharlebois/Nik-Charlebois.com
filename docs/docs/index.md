@@ -1,5 +1,5 @@
 <div class="article-listing">
-    <img src="/blog/posts/2026/authenticating-to-fabric/images/intro-tcm-promo.png" alt ="Introducing the Tenant Configuration Management APIs" />
+    <img src="/blog/posts/2026/introducing-utcm-apis/images/intro-tcm-promo.png" alt ="Introducing the Tenant Configuration Management APIs" />
     <h2><a href="/blog/posts/2026/introducing-utcm-apis/index.html">Introducing the Tenant Configuration Management APIs</a></h2>
     <div class="article-date">January 27th, 2026</div>
     <p>Today, Microsoft is launching ts public preview for the Tenant Configuration Management APIs, which allow organizations to take configuration snapshots of existing tenants and continuously monitor them for configuration drifts. In this article, we will provide overviews and demos of each features offered by the solution.</p>
