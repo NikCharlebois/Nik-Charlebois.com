@@ -5,7 +5,7 @@ title: Introducing the Tenant Configuration Management APIs
 <h1 class="blog-title">Introducing the Tenant Configuration Management APIs</h1>
 <div class="article-date">2026-01-27</div>
 
-<p>On Tuesday, January 27th, Microsoft released the public preview of their Tenant Configuration Management APIs. Those are a set of APIs built on Microsoft Graph which provide features allowing customers to manage their Microsoft 365 tenant's configuration as code. At the time of writing this article, they provide two main features: the ability to backup an existing tenant's configuration into a JSON configuration template, and the ability to continuously monitor your tenants for unwanted configuration drifts. Over the next few months, they will also release the ability to deploy configuration changes (via JSON configuration templates) and to automatically remediate to detected configuration drifts. The current preview supports the following Workloads:</p>
+<p>On Tuesday, January 27th, Microsoft released the public preview of their Tenant Configuration Management APIs. Those are a set of APIs built on Microsoft Graph which provide features allowing customers to manage their Microsoft 365 tenant's configuration as code. At the time of writing this article, they provide two main features: the ability to backup an existing tenant's configuration into a JSON configuration template, and the ability to continuously monitor your tenants for unwanted configuration drifts. Over the next few months, they will also release the ability to deploy configuration changes (via JSON configuration templates) and to automatically remediate to detected configuration drifts. The preview currently only supports the Workloads listed below. Support for additional workloads such as SharePoint Online, Copilot, etc. will be provided over time.</p>
 <ul>
 <li>Defender (limited coverage)</li>
 <li>Entra ID</li>
@@ -14,7 +14,6 @@ title: Introducing the Tenant Configuration Management APIs
 <li>Purview</li>
 <li>Teams</li>
 </ul>
-<p>Support for additional workloads such as SharePoint Online, Copilot, etc. will be provided over time.</p>
 
 <p>While they are currently only available in commercial tenants, Microsoft has plans to make those available in Government and other sovereign clouds in the near future. The fact that the APIs hit public preview today, means that every commercial Microsoft 365 tenant is now able to leverage them and call into the endpoints without any pre-requesites (e.g., the need to onboard a tenant to the preview).</p>
 
