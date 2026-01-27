@@ -402,7 +402,7 @@ Test-TCMConfigurationTemplate -Path "C:\temp\ConfigTemplate.json"
 
 <p>Monitors also have a configuration mode, which during the public preview is enforced to MonitorOnly. This mode means that the monitors will never attempt to change any configuration settings. Instead it will only perform read-only operations and report any drifts detected. Therefore, just like for the snapshot scenario, you are only required to grant the Read permissions and roles returned by my PowerShell utility.</p>
 
-<p>After confirming that the Unified Tenant COnfiguration Management service principal has all the required permissions and roles assigned, we can call the monitor APIs to create our monitor, passing in the content of our configuration template as a parameter.</p>
+<p>After confirming that the Unified Tenant Configuration Management service principal has all the required permissions and roles assigned, we can call the monitor APIs to create our monitor, passing in the content of our configuration template as a parameter.</p>
 
 ```json
 POST https://graph.microsoft.com/beta/admin/configurationManagement/configurationMonitors/
