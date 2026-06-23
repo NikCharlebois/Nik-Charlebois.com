@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">TCM troubleshooting loop</title>
+  <desc id="desc">A decision loop for using errorDetails to troubleshoot failed TCM monitor runs and snapshot jobs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="1" stop-color="#eef3ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="7" stdDeviation="10" flood-color="#172033" flood-opacity=".15"/>
+    </filter>
+    <marker id="arrow" markerWidth="16" markerHeight="16" refX="12" refY="8" orient="auto">
+      <path d="M2,2 L14,8 L2,14 Z" fill="#536076"/>
+    </marker>
+    <style>
+      .title{font:700 28px Arial,sans-serif;fill:#152238}
+      .small{font:500 15px Arial,sans-serif;fill:#536076}
+      .step{fill:#fff;stroke:#d7e3f2;stroke-width:2;filter:url(#shadow)}
+      .num{font:800 26px Arial,sans-serif;fill:#fff}
+      .head{font:700 21px Arial,sans-serif;fill:#152238}
+      .copy{font:500 14px Arial,sans-serif;fill:#536076}
+      .arrow{stroke:#536076;stroke-width:4;fill:none;marker-end:url(#arrow)}
+      .accent{fill:#0f6cbd}
+      .green{fill:#107c10}
+      .orange{fill:#f7630c}
+      .purple{fill:#5b5fc7}
+    </style>
+  </defs>
+  <rect width="1200" height="720" rx="30" fill="url(#bg)"/>
+  <text x="60" y="70" class="title">A simple troubleshooting loop</text>
+  <text x="60" y="104" class="small">Use the same pattern whether the failing object is a monitor result or a snapshot job.</text>
+
+  <rect x="55" y="180" width="320" height="165" rx="24" class="step"/>
+  <circle cx="125" cy="225" r="28" class="accent"/>
+  <text x="117" y="234" class="num">1</text>
+  <text x="170" y="220" class="head">Find failed runs</text>
+  <text x="95" y="270" class="copy">List monitor results or snapshot jobs.</text>
+  <text x="95" y="294" class="copy">Filter on failed or partially</text>
+  <text x="95" y="318" class="copy">successful statuses.</text>
+
+  <path d="M390 260h40" class="arrow"/>
+
+  <rect x="450" y="180" width="320" height="165" rx="24" class="step"/>
+  <circle cx="520" cy="225" r="28" class="purple"/>
+  <text x="512" y="234" class="num">2</text>
+  <text x="565" y="220" class="head">Select errorDetails</text>
+  <text x="490" y="270" class="copy">Call the failed object directly.</text>
+  <text x="490" y="294" class="copy">Use $select=errorDetails with</text>
+  <text x="490" y="318" class="copy">the fields you need.</text>
+
+  <path d="M785 260h40" class="arrow"/>
+
+  <rect x="840" y="180" width="320" height="165" rx="24" class="step"/>
+  <circle cx="915" cy="225" r="28" class="orange"/>
+  <text x="907" y="234" class="num">3</text>
+  <text x="960" y="220" class="head">Identify cause</text>
+  <text x="880" y="270" class="copy">Group by resource type.</text>
+  <text x="880" y="294" class="copy">Check permissions, roles,</text>
+  <text x="880" y="318" class="copy">and unsupported data.</text>
+
+  <path d="M990 355 C990 450 830 450 790 450" class="arrow"/>
+
+  <rect x="450" y="390" width="320" height="165" rx="24" class="step"/>
+  <circle cx="520" cy="435" r="28" class="green"/>
+  <text x="512" y="444" class="num">4</text>
+  <text x="565" y="430" class="head">Fix and rerun</text>
+  <text x="490" y="480" class="copy">Grant the missing permission.</text>
+  <text x="490" y="504" class="copy">Assign the needed role, or</text>
+  <text x="490" y="528" class="copy">adjust the baseline.</text>
+
+  <path d="M440 470 C305 470 205 390 205 355" class="arrow"/>
+
+  <rect x="105" y="575" width="990" height="70" rx="20" fill="#fff" stroke="#d7e3f2" stroke-width="2"/>
+  <text x="145" y="606" class="small">Tip: collect errorDetails in your automation logs.</text>
+  <text x="145" y="630" class="small">Status tells you something failed; errorDetails tells you what to fix.</text>
+</svg>

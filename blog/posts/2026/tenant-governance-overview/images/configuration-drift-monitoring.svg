@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Configuration drift monitoring screenshot</title>
+  <desc id="desc">Conceptual screenshot showing configuration drift monitoring for governed tenants.</desc>
+  <rect width="1400" height="820" rx="22" fill="#f5f7fb"/>
+  <rect x="0" y="0" width="1400" height="72" fill="#24324b"/>
+  <text x="34" y="45" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Tenant Governance dashboard</text>
+  <text x="72" y="140" fill="#1f2937" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Configuration monitoring</text>
+  <text x="72" y="178" fill="#667085" font-family="Segoe UI, Arial, sans-serif" font-size="18">Track whether governed tenants remain aligned with the expected configuration baseline.</text>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="72" y="220" width="282" height="126" rx="16" fill="#ffffff" stroke="#d7dce5"/>
+    <text x="102" y="264" fill="#667085" font-size="16">Governed tenants</text>
+    <text x="102" y="312" fill="#1f2937" font-size="42" font-weight="700">18</text>
+    <rect x="384" y="220" width="282" height="126" rx="16" fill="#ffffff" stroke="#d7dce5"/>
+    <text x="414" y="264" fill="#667085" font-size="16">Healthy</text>
+    <text x="414" y="312" fill="#027a48" font-size="42" font-weight="700">14</text>
+    <rect x="696" y="220" width="282" height="126" rx="16" fill="#ffffff" stroke="#d7dce5"/>
+    <text x="726" y="264" fill="#667085" font-size="16">Drift detected</text>
+    <text x="726" y="312" fill="#b54708" font-size="42" font-weight="700">3</text>
+    <rect x="1008" y="220" width="282" height="126" rx="16" fill="#ffffff" stroke="#d7dce5"/>
+    <text x="1038" y="264" fill="#667085" font-size="16">Critical drift</text>
+    <text x="1038" y="312" fill="#b42318" font-size="42" font-weight="700">1</text>
+    <rect x="72" y="386" width="1218" height="330" rx="16" fill="#ffffff" stroke="#d7dce5"/>
+    <text x="106" y="432" fill="#667085" font-size="15" font-weight="700">TENANT</text>
+    <text x="424" y="432" fill="#667085" font-size="15" font-weight="700">BASELINE AREA</text>
+    <text x="746" y="432" fill="#667085" font-size="15" font-weight="700">DRIFT</text>
+    <text x="1088" y="432" fill="#667085" font-size="15" font-weight="700">STATUS</text>
+    <line x1="72" y1="454" x2="1290" y2="454" stroke="#e4e7ec"/>
+    <text x="106" y="508" fill="#1f2937" font-size="20" font-weight="700">Contoso AI Lab</text>
+    <text x="424" y="508" fill="#1f2937" font-size="18">Conditional Access</text>
+    <text x="746" y="508" fill="#1f2937" font-size="18">MFA grant control removed</text>
+    <rect x="1088" y="484" width="112" height="30" rx="15" fill="#fee4e2"/>
+    <text x="1108" y="504" fill="#b42318" font-size="14" font-weight="700">Critical</text>
+    <line x1="72" y1="544" x2="1290" y2="544" stroke="#e4e7ec"/>
+    <text x="106" y="598" fill="#1f2937" font-size="20" font-weight="700">Fabrikam Acquisition</text>
+    <text x="424" y="598" fill="#1f2937" font-size="18">External collaboration</text>
+    <text x="746" y="598" fill="#1f2937" font-size="18">Guest invite restrictions changed</text>
+    <rect x="1088" y="574" width="112" height="30" rx="15" fill="#fff4e5"/>
+    <text x="1116" y="594" fill="#b54708" font-size="14" font-weight="700">Review</text>
+    <line x1="72" y1="634" x2="1290" y2="634" stroke="#e4e7ec"/>
+    <text x="106" y="688" fill="#1f2937" font-size="20" font-weight="700">Northwind Sandbox</text>
+    <text x="424" y="688" fill="#1f2937" font-size="18">Teams policy</text>
+    <text x="746" y="688" fill="#1f2937" font-size="18">Anonymous join enabled</text>
+    <rect x="1088" y="664" width="112" height="30" rx="15" fill="#fff4e5"/>
+    <text x="1116" y="684" fill="#b54708" font-size="14" font-weight="700">Review</text>
+  </g>
+</svg>
