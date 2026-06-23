@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Anatomy of a TCM errorDetails response</title>
+  <desc id="desc">A JSON response with callouts for resource type, resource instance name, and error message.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#172033" flood-opacity=".18"/>
+    </filter>
+    <marker id="arrow" markerWidth="16" markerHeight="16" refX="12" refY="8" orient="auto">
+      <path d="M2,2 L14,8 L2,14 Z" fill="#0f6cbd"/>
+    </marker>
+    <style>
+      .title{font:700 28px "Segoe UI",Arial,sans-serif;fill:#152238}
+      .subtitle{font:500 17px "Segoe UI",Arial,sans-serif;fill:#536076}
+      .code{font:500 18px "Cascadia Mono","Consolas",monospace;fill:#d7e3f2}
+      .key{fill:#9cdcfe}
+      .string{fill:#ce9178}
+      .note{font:700 19px "Segoe UI",Arial,sans-serif;fill:#152238}
+      .small{font:500 15px "Segoe UI",Arial,sans-serif;fill:#536076}
+      .callout{fill:#fff;stroke:#d7e3f2;stroke-width:2;filter:url(#shadow)}
+      .line{stroke:#0f6cbd;stroke-width:4;fill:none;marker-end:url(#arrow)}
+      .highlight{fill:#fff4ce;opacity:.25}
+    </style>
+  </defs>
+  <rect width="1200" height="700" rx="30" fill="#f6fbff"/>
+  <text x="60" y="68" class="title">What comes back when you select errorDetails</text>
+  <text x="60" y="100" class="subtitle">The payload gives you enough context to map the failure to a specific resource and remediation path.</text>
+
+  <rect x="60" y="145" width="690" height="485" rx="22" fill="#1e1e1e" filter="url(#shadow)"/>
+  <text x="95" y="190" class="code">{</text>
+  <text x="125" y="225" class="code"><tspan class="key">"id"</tspan>: <tspan class="string">"66fa1689-22cb-49c1-8b5a-c94822b7b13b"</tspan>,</text>
+  <text x="125" y="260" class="code"><tspan class="key">"runStatus"</tspan>: <tspan class="string">"failed"</tspan>,</text>
+  <text x="125" y="295" class="code"><tspan class="key">"errorDetails"</tspan>: [</text>
+  <rect x="108" y="314" width="600" height="190" rx="10" class="highlight"/>
+  <text x="155" y="330" class="code">{</text>
+  <text x="185" y="365" class="code"><tspan class="key">"resourceType"</tspan>: <tspan class="string">"microsoft.teams.meetingpolicy"</tspan>,</text>
+  <text x="185" y="400" class="code"><tspan class="key">"resourceInstanceName"</tspan>: <tspan class="string">"Global"</tspan>,</text>
+  <text x="185" y="435" class="code"><tspan class="key">"errorMessage"</tspan>: <tspan class="string">"Access Denied."</tspan></text>
+  <text x="155" y="470" class="code">}</text>
+  <text x="125" y="515" class="code">]</text>
+  <text x="95" y="550" class="code">}</text>
+
+  <path d="M640 358 C790 330 785 220 880 220" class="line"/>
+  <rect x="875" y="165" width="265" height="105" rx="20" class="callout"/>
+  <text x="905" y="203" class="note">resourceType</text>
+  <text x="905" y="232" class="small">Which TCM resource provider</text>
+  <text x="905" y="255" class="small">failed during processing.</text>
+
+  <path d="M645 398 C790 420 785 355 880 355" class="line"/>
+  <rect x="875" y="310" width="265" height="112" rx="20" class="callout"/>
+  <text x="905" y="348" class="note">resourceInstanceName</text>
+  <text x="905" y="377" class="small">The object or instance that</text>
+  <text x="905" y="400" class="small">caused the failure.</text>
+
+  <path d="M610 435 C785 510 785 500 880 500" class="line"/>
+  <rect x="875" y="455" width="265" height="125" rx="20" class="callout"/>
+  <text x="905" y="493" class="note">errorMessage</text>
+  <text x="905" y="522" class="small">The remediation clue: missing</text>
+  <text x="905" y="545" class="small">permission, missing role, or</text>
+  <text x="905" y="568" class="small">resource-specific failure.</text>
+</svg>
