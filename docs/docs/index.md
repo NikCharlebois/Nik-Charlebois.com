@@ -6,13 +6,6 @@
 </div>
 
 <div class="article-listing">
-    <img src="/blog/posts/2026/tenant-governance-overview/images/tenant-governance-overview.svg" alt ="Tenant Governance overview" />
-    <h2><a href="/blog/posts/2026/tenant-governance-overview/index.html">Tenant Governance: The Control Plane for Your Microsoft 365 Tenant Ecosystem</a></h2>
-    <div class="article-date">June 5th, 2026</div>
-    <p>Provides a high-level overview of Microsoft Entra Tenant Governance, why it is becoming a crucial control plane for tenant ecosystems, and how discovery, governance relationships, delegated administration, secure tenant creation, configuration management, and APIs work together.</p>
-</div>
-
-<div class="article-listing">
     <img src="/blog/posts/2026/introducing-tcm-apis/images/intro-tcm-promo.png" alt ="Introducing the Tenant Configuration Management APIs" />
     <h2><a href="/blog/posts/2026/introducing-tcm-apis/index.html">Introducing the Tenant Configuration Management APIs</a></h2>
     <div class="article-date">January 27th, 2026</div>
