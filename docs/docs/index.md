@@ -1,4 +1,11 @@
 <div class="article-listing">
+    <img src="/blog/posts/2026/tcm-monitor-parameters/images/tcm-monitor-parameters-promo.svg" alt ="Using Parameters When Creating Tenant Configuration Management Monitors" />
+    <h2><a href="/blog/posts/2026/tcm-monitor-parameters/index.html">Using Parameters When Creating Tenant Configuration Management Monitors</a></h2>
+    <div class="article-date">July 10th, 2026</div>
+    <p>Shows how to create reusable Tenant Configuration Management monitor baselines by declaring parameters, passing tenant-specific values, and using expressions such as parameters() and concat() to build dynamic resource properties.</p>
+</div>
+
+<div class="article-listing">
     <img src="/blog/posts/2026/tcm-error-details/images/error-details-flow.svg" alt ="Troubleshooting TCM monitor and snapshot job errors with errorDetails" />
     <h2><a href="/blog/posts/2026/tcm-error-details/index.html">Troubleshooting TCM Monitor and Snapshot Job Errors with errorDetails</a></h2>
     <div class="article-date">June 22nd, 2026</div>
