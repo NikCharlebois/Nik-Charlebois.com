@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Related tenants discovery screenshot</title>
+  <desc id="desc">Conceptual admin center screenshot showing related tenants and their discovery signals.</desc>
+  <rect width="1400" height="820" rx="22" fill="#f5f7fb"/>
+  <rect x="0" y="0" width="1400" height="72" fill="#24324b"/>
+  <text x="34" y="45" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Microsoft Entra admin center</text>
+  <rect x="0" y="72" width="250" height="748" fill="#ffffff"/>
+  <text x="32" y="130" fill="#1f2937" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Tenant governance</text>
+  <text x="32" y="178" fill="#5f6b7a" font-family="Segoe UI, Arial, sans-serif" font-size="17">Overview</text>
+  <rect x="20" y="204" width="210" height="42" rx="8" fill="#e8f0fe"/>
+  <text x="32" y="231" fill="#1f4b99" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">Related tenants</text>
+  <text x="32" y="282" fill="#5f6b7a" font-family="Segoe UI, Arial, sans-serif" font-size="17">Relationships</text>
+  <text x="32" y="328" fill="#5f6b7a" font-family="Segoe UI, Arial, sans-serif" font-size="17">Policy templates</text>
+  <text x="32" y="374" fill="#5f6b7a" font-family="Segoe UI, Arial, sans-serif" font-size="17">Configuration</text>
+  <text x="292" y="132" fill="#1f2937" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Related tenants</text>
+  <text x="292" y="170" fill="#667085" font-family="Segoe UI, Arial, sans-serif" font-size="18">Tenants discovered through B2B collaboration, multitenant applications, and shared billing signals.</text>
+  <rect x="292" y="208" width="1018" height="86" rx="14" fill="#ffffff" stroke="#d7dce5"/>
+  <text x="322" y="242" fill="#475467" font-family="Segoe UI, Arial, sans-serif" font-size="16">High-priority signals</text>
+  <text x="322" y="274" fill="#1f2937" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">3 tenants need review</text>
+  <text x="620" y="242" fill="#475467" font-family="Segoe UI, Arial, sans-serif" font-size="16">New this week</text>
+  <text x="620" y="274" fill="#1f2937" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">2 tenants</text>
+  <text x="884" y="242" fill="#475467" font-family="Segoe UI, Arial, sans-serif" font-size="16">Shared billing</text>
+  <text x="884" y="274" fill="#1f2937" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">4 tenants</text>
+  <rect x="292" y="326" width="1018" height="420" rx="14" fill="#ffffff" stroke="#d7dce5"/>
+  <text x="322" y="372" fill="#667085" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">TENANT</text>
+  <text x="604" y="372" fill="#667085" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">DISCOVERY SIGNALS</text>
+  <text x="965" y="372" fill="#667085" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">RECOMMENDED ACTION</text>
+  <line x1="292" y1="394" x2="1310" y2="394" stroke="#e4e7ec"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="322" y="444" fill="#1f2937" font-size="20" font-weight="700">Contoso Research Labs</text>
+    <text x="322" y="474" fill="#667085" font-size="15">New tenant discovered 2 days ago</text>
+    <rect x="604" y="420" width="104" height="30" rx="15" fill="#fff4e5"/>
+    <text x="624" y="440" fill="#915930" font-size="14">Billing</text>
+    <rect x="720" y="420" width="82" height="30" rx="15" fill="#e8f0fe"/>
+    <text x="739" y="440" fill="#1f4b99" font-size="14">B2B</text>
+    <rect x="814" y="420" width="128" height="30" rx="15" fill="#f3e8ff"/>
+    <text x="835" y="440" fill="#6941c6" font-size="14">App access</text>
+    <text x="965" y="444" fill="#b42318" font-size="18" font-weight="700">Open governance review</text>
+    <line x1="292" y1="504" x2="1310" y2="504" stroke="#e4e7ec"/>
+    <text x="322" y="554" fill="#1f2937" font-size="20" font-weight="700">Fabrikam Acquisition</text>
+    <text x="322" y="584" fill="#667085" font-size="15">Known acquisition tenant</text>
+    <rect x="604" y="530" width="82" height="30" rx="15" fill="#e8f0fe"/>
+    <text x="623" y="550" fill="#1f4b99" font-size="14">B2B</text>
+    <rect x="698" y="530" width="160" height="30" rx="15" fill="#ecfdf3"/>
+    <text x="718" y="550" fill="#027a48" font-size="14">Governed</text>
+    <text x="965" y="554" fill="#027a48" font-size="18" font-weight="700">Monitor relationship</text>
+    <line x1="292" y1="614" x2="1310" y2="614" stroke="#e4e7ec"/>
+    <text x="322" y="664" fill="#1f2937" font-size="20" font-weight="700">Northwind Sandbox</text>
+    <text x="322" y="694" fill="#667085" font-size="15">Engineering test environment</text>
+    <rect x="604" y="640" width="104" height="30" rx="15" fill="#fff4e5"/>
+    <text x="624" y="660" fill="#915930" font-size="14">Billing</text>
+    <text x="965" y="664" fill="#b54708" font-size="18" font-weight="700">Confirm owner</text>
+  </g>
+</svg>

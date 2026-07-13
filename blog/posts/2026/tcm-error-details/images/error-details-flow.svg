@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">TCM error details retrieval flow</title>
+  <desc id="desc">A flow showing how monitor runs and snapshot jobs expose error details only when selected in a Microsoft Graph call.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6fbff"/>
+      <stop offset="1" stop-color="#eef4ff"/>
+    </linearGradient>
+    <linearGradient id="graph" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f6cbd"/>
+      <stop offset="1" stop-color="#5b5fc7"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-15%" width="120%" height="135%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#172033" flood-opacity=".16"/>
+    </filter>
+    <marker id="arrow" markerWidth="16" markerHeight="16" refX="12" refY="8" orient="auto">
+      <path d="M2,2 L14,8 L2,14 Z" fill="#536076"/>
+    </marker>
+    <style>
+      .label{font:700 24px "Segoe UI",Arial,sans-serif;fill:#152238}
+      .small{font:500 16px "Segoe UI",Arial,sans-serif;fill:#536076}
+      .tiny{font:600 14px "Segoe UI",Arial,sans-serif;fill:#697386}
+      .code{font:600 16px "Cascadia Mono","Consolas",monospace;fill:#162033}
+      .card{fill:#fff;stroke:#d7e3f2;stroke-width:2;filter:url(#shadow)}
+      .pill{fill:#e8f3ff;stroke:#b8d9ff;stroke-width:1}
+      .warn{fill:#fff7e6;stroke:#ffd38a;stroke-width:2}
+      .ok{fill:#edf8f1;stroke:#9bd2ad;stroke-width:2}
+      .arrow{stroke:#536076;stroke-width:4;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="620" rx="30" fill="url(#bg)"/>
+  <text x="60" y="70" class="label">Getting actionable TCM errors from Microsoft Graph</text>
+  <text x="60" y="102" class="small">The default response tells you a job failed. The selected response tells you why.</text>
+
+  <rect x="60" y="160" width="265" height="180" rx="24" class="card"/>
+  <circle cx="100" cy="205" r="24" fill="#dff6dd"/>
+  <path d="M89 205l8 8 16-20" stroke="#107c10" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="135" y="200" class="label" font-size="22">Run operation</text>
+  <text x="90" y="245" class="small">Configuration monitor run</text>
+  <text x="90" y="272" class="small">or snapshot job</text>
+  <rect x="90" y="292" width="180" height="28" rx="14" class="pill"/>
+  <text x="105" y="312" class="tiny">status: failed / partial</text>
+
+  <path d="M340 250h105" class="arrow"/>
+
+  <rect x="465" y="140" width="310" height="220" rx="24" class="card"/>
+  <rect x="505" y="178" width="230" height="54" rx="14" fill="url(#graph)"/>
+  <text x="530" y="212" style="font:700 22px 'Segoe UI',Arial,sans-serif;fill:#fff">Microsoft Graph</text>
+  <text x="505" y="268" class="code">GET ...?$select=errorDetails</text>
+  <text x="505" y="302" class="small">Request the non-default property</text>
+  <text x="505" y="328" class="small">instead of troubleshooting blind.</text>
+
+  <path d="M790 250h105" class="arrow"/>
+
+  <rect x="915" y="120" width="225" height="270" rx="24" class="card"/>
+  <text x="955" y="170" class="label" font-size="22">errorDetails</text>
+  <rect x="955" y="205" width="145" height="34" rx="17" class="ok"/>
+  <text x="970" y="228" class="tiny">resourceType</text>
+  <rect x="955" y="253" width="168" height="34" rx="17" class="ok"/>
+  <text x="970" y="276" class="tiny">resourceInstanceName</text>
+  <rect x="955" y="301" width="148" height="34" rx="17" class="warn"/>
+  <text x="970" y="324" class="tiny">errorMessage</text>
+  <text x="955" y="362" class="small">Use the three fields to</text>
+  <text x="955" y="386" class="small">fix permissions, roles,</text>
+  <text x="955" y="410" class="small">or unsupported settings.</text>
+
+  <rect x="180" y="445" width="840" height="92" rx="22" fill="#ffffff" stroke="#d7e3f2" stroke-width="2"/>
+  <text x="220" y="483" class="code">Default: id + status + timestamps</text>
+  <text x="220" y="515" class="code">Selected: id + status + errorDetails[]</text>
+  <path d="M610 493h200" stroke="#0f6cbd" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow)"/>
+</svg>
