@@ -79,7 +79,7 @@ testSharedMailbox@contoso.onmicrosoft.com
 <p>The following example creates a monitor with a parameterized Exchange shared mailbox resource. The baseline declares the <code>FQDN</code> parameter, uses it to build the shared mailbox primary SMTP address and an additional email address, and then supplies the tenant-specific value when creating the monitor.</p>
 
 ```http
-POST https://graph.microsoft.com/beta/admin/configurationManagement/configurationMonitors/
+POST https://graph.microsoft.com/v1.0/admin/configurationManagement/configurationMonitors/
 ```
 
 ```json
