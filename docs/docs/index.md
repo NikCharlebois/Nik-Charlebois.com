@@ -1,4 +1,11 @@
 <div class="article-listing">
+    <img src="/blog/posts/2026/m365dsc-to-tcm-baseline/images/m365dsc-to-tcm-baseline-promo.svg" alt ="Converting an M365DSC Configuration into a UTCM Baseline" />
+    <h2><a href="/blog/posts/2026/m365dsc-to-tcm-baseline/index.html">Converting an M365DSC Configuration into a UTCM Baseline</a></h2>
+    <div class="article-date">July 29th, 2026</div>
+    <p>Walks through converting an extracted Microsoft365DSC configuration into a Unified Tenant Configuration Management baseline using the M365DSC-to-TCM PowerShell utility, including parameterization, resource mapping checks, validation, and monitor usage.</p>
+</div>
+
+<div class="article-listing">
     <img src="/blog/posts/2026/tcm-monitor-parameters/images/tcm-monitor-parameters-promo.svg" alt ="Using Parameters When Creating Tenant Configuration Management Monitors" />
     <h2><a href="/blog/posts/2026/tcm-monitor-parameters/index.html">Using Parameters When Creating Tenant Configuration Management Monitors</a></h2>
     <div class="article-date">July 10th, 2026</div>
