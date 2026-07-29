@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Governance relationship setup screenshot</title>
+  <desc id="desc">Conceptual screenshot showing the setup of a governance relationship and delegated administration policy.</desc>
+  <rect width="1400" height="820" rx="22" fill="#f5f7fb"/>
+  <rect x="0" y="0" width="1400" height="72" fill="#24324b"/>
+  <text x="34" y="45" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Microsoft Entra admin center</text>
+  <text x="72" y="140" fill="#1f2937" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Create governance relationship</text>
+  <text x="72" y="178" fill="#667085" font-family="Segoe UI, Arial, sans-serif" font-size="18">Define how the governing tenant will administer the governed tenant.</text>
+  <rect x="72" y="222" width="1256" height="510" rx="18" fill="#ffffff" stroke="#d7dce5"/>
+  <rect x="118" y="270" width="520" height="156" rx="14" fill="#f8fafc" stroke="#d7dce5"/>
+  <text x="150" y="315" fill="#475467" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">GOVERNING TENANT</text>
+  <text x="150" y="356" fill="#1f2937" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="700">Contoso Corporate</text>
+  <text x="150" y="390" fill="#667085" font-family="Segoe UI, Arial, sans-serif" font-size="17">Primary identity and security operations tenant</text>
+  <rect x="762" y="270" width="520" height="156" rx="14" fill="#f8fafc" stroke="#d7dce5"/>
+  <text x="794" y="315" fill="#475467" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">GOVERNED TENANT</text>
+  <text x="794" y="356" fill="#1f2937" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="700">Contoso AI Lab</text>
+  <text x="794" y="390" fill="#667085" font-family="Segoe UI, Arial, sans-serif" font-size="17">Engineering tenant used for application validation</text>
+  <path d="M650 348 H748" stroke="#3b82f6" stroke-width="5"/>
+  <path d="M730 330 L748 348 L730 366" fill="none" stroke="#3b82f6" stroke-width="5"/>
+  <text x="701" y="322" text-anchor="middle" fill="#1f4b99" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">GDAP</text>
+  <rect x="118" y="468" width="1164" height="210" rx="14" fill="#ffffff" stroke="#d7dce5"/>
+  <text x="150" y="514" fill="#1f2937" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Delegated administration policy</text>
+  <line x1="150" y1="544" x2="1248" y2="544" stroke="#e4e7ec"/>
+  <text x="150" y="582" fill="#667085" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">GOVERNING GROUP</text>
+  <text x="520" y="582" fill="#667085" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">DELEGATED ROLES</text>
+  <text x="930" y="582" fill="#667085" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">PURPOSE</text>
+  <text x="150" y="630" fill="#1f2937" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700">Identity Operations</text>
+  <text x="520" y="630" fill="#1f2937" font-family="Segoe UI, Arial, sans-serif" font-size="18">Directory Reader, Conditional Access Administrator</text>
+  <text x="930" y="630" fill="#1f2937" font-family="Segoe UI, Arial, sans-serif" font-size="18">Policy review and troubleshooting</text>
+  <line x1="150" y1="652" x2="1248" y2="652" stroke="#e4e7ec"/>
+  <text x="150" y="696" fill="#1f2937" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700">Security Engineering</text>
+  <text x="520" y="696" fill="#1f2937" font-family="Segoe UI, Arial, sans-serif" font-size="18">Security Reader</text>
+  <text x="930" y="696" fill="#1f2937" font-family="Segoe UI, Arial, sans-serif" font-size="18">Investigation and audit visibility</text>
+</svg>

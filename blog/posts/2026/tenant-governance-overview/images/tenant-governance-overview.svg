@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Tenant Governance overview</title>
+  <desc id="desc">A central governed tenant connected to related tenants, governance relationships, delegated administration, configuration management, and secure tenant creation.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1f2a44"/>
+      <stop offset="100%" stop-color="#4b3f72"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" rx="36" fill="url(#background)"/>
+  <circle cx="1040" cy="120" r="150" fill="#7c6fb0" opacity="0.25"/>
+  <circle cx="160" cy="520" r="190" fill="#5dd6c7" opacity="0.16"/>
+  <text x="72" y="92" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="700">Tenant Governance</text>
+  <text x="72" y="136" fill="#dbeafe" font-family="Segoe UI, Arial, sans-serif" font-size="22">Visibility, control, and automation across your tenant ecosystem</text>
+
+  <g filter="url(#shadow)">
+    <rect x="430" y="210" width="340" height="200" rx="28" fill="#ffffff"/>
+    <text x="600" y="280" text-anchor="middle" fill="#1f2a44" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Governing tenant</text>
+    <text x="600" y="322" text-anchor="middle" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="19">Policy, visibility, access</text>
+    <text x="600" y="355" text-anchor="middle" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="19">and configuration baselines</text>
+  </g>
+
+  <g fill="none" stroke="#dbeafe" stroke-width="4" opacity="0.85">
+    <path d="M430 300 H250"/>
+    <path d="M770 300 H950"/>
+    <path d="M515 410 L365 505"/>
+    <path d="M685 410 L835 505"/>
+  </g>
+
+  <g font-family="Segoe UI, Arial, sans-serif" filter="url(#shadow)">
+    <rect x="90" y="240" width="230" height="120" rx="22" fill="#ffffff"/>
+    <text x="205" y="293" text-anchor="middle" fill="#1f2a44" font-size="21" font-weight="700">Related tenants</text>
+    <text x="205" y="326" text-anchor="middle" fill="#64748b" font-size="16">Discover relationships</text>
+
+    <rect x="880" y="240" width="230" height="120" rx="22" fill="#ffffff"/>
+    <text x="995" y="293" text-anchor="middle" fill="#1f2a44" font-size="21" font-weight="700">Governance</text>
+    <text x="995" y="326" text-anchor="middle" fill="#64748b" font-size="16">relationships</text>
+
+    <rect x="210" y="480" width="260" height="112" rx="22" fill="#ffffff"/>
+    <text x="340" y="530" text-anchor="middle" fill="#1f2a44" font-size="21" font-weight="700">Delegated admin</text>
+    <text x="340" y="563" text-anchor="middle" fill="#64748b" font-size="16">Least-privilege access</text>
+
+    <rect x="730" y="480" width="260" height="112" rx="22" fill="#ffffff"/>
+    <text x="860" y="530" text-anchor="middle" fill="#1f2a44" font-size="21" font-weight="700">Configuration</text>
+    <text x="860" y="563" text-anchor="middle" fill="#64748b" font-size="16">Snapshots and drift</text>
+  </g>
+</svg>
